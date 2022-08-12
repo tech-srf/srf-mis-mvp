@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link , Navigate } from 'react-router-dom'
 import Logo from "../assets/img/logo.png"
-import LoginButton from '../components/LoginButton';
+// import LoginButton from '../components/LoginButton';
 
 
 const Landing = ({ isAuthenticated }) => {
@@ -18,9 +18,9 @@ return (
             <p className="lead">
             Managemement Information System
             </p>
-            <div className="btn btn-light">
-                <LoginButton />
-            </div>
+            <Link to="/signup" className="btn btn-light">
+                Login
+            </Link>
         </div>
         </div>
     </section>

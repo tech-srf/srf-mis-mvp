@@ -1,4 +1,5 @@
 const express = require("express");
+const fileUpload = require('express-fileupload');
 const app = express();
 const cors = require("cors");
 const path = require("path")
@@ -7,6 +8,7 @@ require("dotenv").config({ path: "./config.env" });
 
 app.use(cors());
 app.use(express.json());
+app.use(fileUpload());
 app.use(require("./routes/signup"));
 app.use(require("./routes/casemanagement"));
 app.use(require("./routes/class8"));

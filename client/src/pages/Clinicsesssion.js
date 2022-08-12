@@ -132,9 +132,9 @@ const Clinic = () => {
                                     onChange={(e) => updateForm({ team: e.target.value })}
                                 >
                                     <option>Select a Team</option>
-                                    <option value="Under10s">Under 10s</option>
-                                    <option value="Under12s">Under 12s</option>
-                                    <option value="Under16s">Under 16s</option>
+                                    <option value="Under 10s">Under 10s</option>
+                                    <option value="Under 12s">Under 12s</option>
+                                    <option value="Under 16s">Under 16s</option>
                                     <option value="Junior">Junior</option>
                                     <option value="Senior">Senior</option>
                                 </select>            

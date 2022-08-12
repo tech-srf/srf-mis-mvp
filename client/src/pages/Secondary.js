@@ -20,7 +20,7 @@ const School = () => {
         businessmarks:"",
         computermarks:"",
         agriculturemarks:"",
-        artmarks:"",
+        fineartmarks:"",
     });
         const navigate = useNavigate();
         
@@ -38,7 +38,7 @@ const School = () => {
             // When a post request is sent to the create url, we'll add a new record to the database.
             const newPlayer = { ...form };
         
-            await fetch("http://localhost:5000/schoolsession/add", {
+            await fetch("http://localhost:5000/secondaryrecord/add", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -65,7 +65,7 @@ const School = () => {
             businessmarks:"",
             computermarks:"",
             agriculturemarks:"",
-            artmarks:"",
+            fineartmarks:"",
         });
         navigate("/education");
     }
@@ -108,7 +108,7 @@ const School = () => {
                 <div className="form-group">
                 <label htmlFor="english">English</label>
                 <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="englishmarks"
                     placeholder="Add marks"
@@ -119,7 +119,7 @@ const School = () => {
                 <div className="form-group">
                 <label htmlFor="maths">Maths</label>
                 <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="mathsmarks"
                     placeholder="Add marks"
@@ -130,7 +130,7 @@ const School = () => {
                 <div className="form-group">
                 <label htmlFor="kiswahili">Kiswahili</label>
                 <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="kiswahilimarks"
                     placeholder="Add marks"
@@ -141,7 +141,7 @@ const School = () => {
                 <div className="form-group">
                 <label htmlFor="biology">Biology</label>
                 <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="biologymarks"
                     placeholder="Add marks"
@@ -152,7 +152,7 @@ const School = () => {
                 <div className="form-group">
                 <label htmlFor="physics ">Physics</label>
                 <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="physicsmarks"
                     placeholder="Add marks"
@@ -162,7 +162,7 @@ const School = () => {
                 </div><div className="form-group">
                 <label htmlFor="chemistry">Chemistry</label>
                 <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="chemistrymarks"
                     placeholder="Add marks"
@@ -173,7 +173,7 @@ const School = () => {
                 <div className="form-group">
                 <label htmlFor="history">History</label>
                 <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="historymarks"
                     placeholder="Add marks"
@@ -184,7 +184,7 @@ const School = () => {
                 <div className="form-group">
                 <label htmlFor="geography">Geography</label>
                 <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="geographymarks"
                     placeholder="Add marks"
@@ -195,7 +195,7 @@ const School = () => {
                 <div className="form-group">
                 <label htmlFor="cre">CRE</label>
                 <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="cremarks"
                     placeholder="Add marks"
@@ -206,7 +206,7 @@ const School = () => {
                 <div className="form-group">
                 <label htmlFor="business">Business Studies</label>
                 <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="businessmarks"
                     placeholder="Add marks"
@@ -217,7 +217,7 @@ const School = () => {
                 <div className="form-group">
                 <label htmlFor="computer">Computer Studies</label>
                 <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="computermarks"
                     placeholder="Add marks"
@@ -228,7 +228,7 @@ const School = () => {
                 <div className="form-group">
                 <label htmlFor="agriculture">Agriculture</label>
                 <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="agriculturemarks"
                     placeholder="Add marks"
@@ -237,14 +237,14 @@ const School = () => {
                 />           
                 </div>
                 <div className="form-group">
-                <label htmlFor="art">Art</label>
+                <label htmlFor="fineart">Fine Art</label>
                 <input
-                    type="number"
+                    type="text"
                     className="form-control"
-                    id="artmarks"
+                    id="fineartmarks"
                     placeholder="Add marks"
-                    value={form.artmarks}
-                    onChange={(e) => updateForm({ artmarks: e.target.value })}
+                    value={form.fineartmarks}
+                    onChange={(e) => updateForm({ fineartmarks: e.target.value })}
                 />           
                 </div>
                 <div className="form-group">

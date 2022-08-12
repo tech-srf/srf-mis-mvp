@@ -13,7 +13,7 @@ const ObjectId = require("mongodb").ObjectId;
 
 
 // This section will help you get a list of all the signups.
-signupRoutes.route("api/signup").get(function (req, res) {
+signupRoutes.route("/signup").get(function (req, res) {
   let db_connect = dbo.getDb("players");
   db_connect
     .collection("signups")
@@ -25,7 +25,7 @@ signupRoutes.route("api/signup").get(function (req, res) {
 });
 
 // This section will help you get a single signup by id
-signupRoutes.route("api/signup/:id").get(function (req, res) {
+signupRoutes.route("/signup/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   db_connect
@@ -37,7 +37,7 @@ signupRoutes.route("api/signup/:id").get(function (req, res) {
 });
 
 // This section will help you create a new signup.
-signupRoutes.route("api/signup/add").post(function (req, response) {
+signupRoutes.route("/signup/add").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
       firstname: req.body.firstname,

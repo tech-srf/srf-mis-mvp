@@ -33,13 +33,13 @@ function NavSideBar() {
                             Sign Up
                             </a>
                         </li>
-                        {/* <li className="nav-item">
+                        <li className="nav-item">
                             <a className="nav-link" href="/registration">
                             <span data-feather="shopping-cart"></span>
                             <i className="bi bi-calendar2-check text-success px-3"></i>
                             Registration
                             </a>
-                        </li> */}
+                        </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/attendance">
                             <span data-feather="users"></span>

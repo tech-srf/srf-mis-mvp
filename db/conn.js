@@ -2,6 +2,7 @@
 const { MongoClient } = require("mongodb");
 const Db = process.env.ATLAS_URI;
 const client = new MongoClient(Db, {
+  
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -16,7 +17,7 @@ module.exports = {
       {
         // _db = db.db("employees");
         _db = db.db("players");
-        console.log("Successfully connected to MongoDB."); 
+        console.log(`MongoDB Connected`); 
       }
       return callback(err);
         });

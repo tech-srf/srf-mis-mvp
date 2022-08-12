@@ -83,13 +83,13 @@ const Lifeskills = () => {
                         onChange={(e) => updateForm({ clinic: e.target.value })}
                     >
                         <option>Select a Clinic</option>
-                        <option value="eastlands">Eastlands</option>
-                        <option value="kangemi">Kangemi</option>
-                        <option value="kibera">Kibera</option>
-                        <option value="korogocho">Korogocho</option>
-                        <option value="mathare">Mathare</option>
-                        <option value="ngewe">Ngewe</option>
-                        <option value="tatucity">Tatu City</option>
+                        <option value="Eastlands">Eastlands</option>
+                        <option value="Kangemi">Kangemi</option>
+                        <option value="Kibera">Kibera</option>
+                        <option value="Korogocho">Korogocho</option>
+                        <option value="Mathare">Mathare</option>
+                        <option value="Ngewe">Ngewe</option>
+                        <option value="Tatu City">Tatu City</option>
                     </select>            
                     </div>
                     <label>Class</label>

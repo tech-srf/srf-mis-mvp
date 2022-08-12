@@ -103,9 +103,9 @@ const Class8 = () => {
                                 onChange={(e) => updateForm({ respondent: e.target.value })}
                             >
                                 <option>Select Respondent</option>
-                                <option value="father">Father</option>
-                                <option value="mother">Mother</option>
-                                <option value="guardian">Guardian</option>
+                                <option value="Father">Father</option>
+                                <option value="Mother">Mother</option>
+                                <option value="Guardian">Guardian</option>
                             </select>            
                             </div>
                             <div className="form-group">
@@ -131,9 +131,9 @@ const Class8 = () => {
                                 onChange={(e) => updateForm({ currentperformance: e.target.value })}
                             >
                                 <option>What is the current academic performance of the class 8 dependents?</option>
-                                <option value="high">High (above 350)</option>
-                                <option value="average">Average (250 - 300)</option>
-                                <option value="b-average">Below Average (250 & below) </option>
+                                <option value="High">High (above 350)</option>
+                                <option value="Average">Average (250 - 300)</option>
+                                <option value="Below Average">Below Average (250 & below) </option>
                             </select>            
                             </div>
                             <div className="form-group">
@@ -155,8 +155,8 @@ const Class8 = () => {
                                 onChange={(e) => updateForm({ highschoolexpectation: e.target.value })}
                             >
                                 <option>Do you expect your child/children to join High School</option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
                             </select>            
                             </div>
                             <div className="form-group">
@@ -187,8 +187,8 @@ const Class8 = () => {
                                 onChange={(e) => updateForm({ activemembers: e.target.value })}
                             >
                                 <option>Are all of them still active members</option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
                             </select>            
                             </div>
                             <div className="form-group">
@@ -210,8 +210,8 @@ const Class8 = () => {
                                 onChange={(e) => updateForm({ srfimpact: e.target.value })}
                             >
                                 <option>Has SRF made an impact on your child/children since thet joined the program</option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
                             </select>            
                             </div>
                             <div className="form-group">

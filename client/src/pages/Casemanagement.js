@@ -92,11 +92,11 @@ const Casemanagement= () => {
                                 onChange={(e) => updateForm({ clienttype: e.target.value })}
                             >
                                 <option>Select Client Type</option>
-                                <option value="Community-Champion">Community Champion</option>
+                                <option value="Community Champion">Community Champion</option>
                                 <option value="Coach">Refered by Coach</option>
                                 <option value="Counselor">Couselor Initiated</option>
                                 <option value="Peer">Peer Initiated</option>
-                                <option value="Home-visit">Referred after Home Visit</option>
+                                <option value="Home Visit">Referred after Home Visit</option>
                             </select>            
                             </div>
                             <div className="form-group">

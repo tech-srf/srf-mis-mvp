@@ -121,8 +121,8 @@ async function onSubmit(e) {
                 onChange={(e) => updateForm({ gender: e.target.value })}
             >
                 <option>Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
             </select>            
             </div>
             <div className="form-group">
@@ -154,9 +154,9 @@ async function onSubmit(e) {
                 onChange={(e) => updateForm({ relationship: e.target.value })}
             >
                 <option>Select Relationship</option>
-                <option value="father">Father</option>
-                <option value="mother">Mother</option>
-                <option value="guardian">Guardian</option>
+                <option value="Father">Father</option>
+                <option value="Mother">Mother</option>
+                <option value="Guardian">Guardian</option>
             </select>            
             </div>
             <div className="form-group">
@@ -174,7 +174,7 @@ async function onSubmit(e) {
                 <option value="Korogocho">Korogocho</option>
                 <option value="Mathare">Mathare</option>
                 <option value="Ngewe">Ngewe</option>
-                <option value="Tatucity">Tatu City</option>
+                <option value="Tatu City">Tatu City</option>
             </select>            
             </div>
             <div className="form-group">
@@ -185,9 +185,9 @@ async function onSubmit(e) {
                 onChange={(e) => updateForm({ team: e.target.value })}
             >
                 <option>Select a Team</option>
-                <option value="Under10s">Under 10s</option>
-                <option value="Under12s">Under 12s</option>
-                <option value="Under16s">Under 16s</option>
+                <option value="Under 10s">Under 10s</option>
+                <option value="Under 12s">Under 12s</option>
+                <option value="Under 16s">Under 16s</option>
                 <option value="Junior">Junior</option>
                 <option value="Senior">Senior</option>
             </select>            
