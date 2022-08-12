@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link , Navigate } from 'react-router-dom'
 import Logo from "../assets/img/logo.png"
+import LoginButton from '../components/LoginButton';
+
 
 const Landing = ({ isAuthenticated }) => {
     if (isAuthenticated) {
@@ -16,10 +18,8 @@ return (
             <p className="lead">
             Managemement Information System
             </p>
-            <div className="buttons">
-            <Link to="/signup" className="btn btn-light">
-                Login
-            </Link>
+            <div className="btn btn-light">
+                <LoginButton />
             </div>
         </div>
         </div>

@@ -13,7 +13,8 @@ app.use(require("./routes/class8"));
 app.use(require("./routes/clinicsession"));
 app.use(require("./routes/counseling"));
 app.use(require("./routes/schoolsession"));
-app.use(require("./routes/educationrecord"));
+app.use(require("./routes/primaryrecord"));
+app.use(require("./routes/secondaryrecord"));
 app.use(require("./routes/lifeskillssession"));
 app.use(require("./routes/registration"));
 

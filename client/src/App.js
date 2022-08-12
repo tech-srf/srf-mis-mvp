@@ -2,8 +2,8 @@ import React, { Fragment } from 'react'
 
 // import { useDispatch } from 'react-redux'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Login from './pages/auth/Login'
-import Create from './pages/auth/Create'
+// import Login from './pages/auth/Login'
+// import Create from './pages/auth/Create'
 import Admin from './pages/Admin'
 import Attendance from './pages/Attendance'
 import Counseling from './pages/Counseling'
@@ -48,8 +48,8 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
-            <Route exact path="/login" element={<Login />} />
-            <Route exact path="/create" element={<Create />} />
+            {/* <Route exact path="/login" element={<Login />} />
+            <Route exact path="/create" element={<Create />} /> */}
             <Route exact path="/admin" element={<Admin />} />
             <Route exact path="/visits" element={<Visits />}/>
             <Route exact path="/attendance" element={<Attendance />} />

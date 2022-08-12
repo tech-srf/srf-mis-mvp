@@ -61,13 +61,13 @@ function NavSideBar() {
                             Counseling
                             </a>
                         </li>
-                        {/* <li className="nav-item">
+                        <li className="nav-item">
                             <a className="nav-link" href="/education">
                             <span data-feather="layers"></span>
                             <i className="bi bi-book-half text-success px-3"></i>
                             Education
                             </a>
-                        </li> */}
+                        </li>
                         <li className="nav-item">
                             <a className="nav-link" href="lifeskills">
                             <span data-feather="layers"></span>
@@ -106,7 +106,7 @@ function NavSideBar() {
                             </a>
                         </li> */}
                         <li className="nav-item">
-                            <a className="nav-link" href="/">
+                            <a className="nav-link" href="/logout">
                             <span data-feather="file-text"></span>
                             <i className="bi bi-file-earmark-lock2 text-success px-3"></i>
                             Log Out
