@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Auth0Provider } from '@auth0/auth0-react';
+// import { Auth0Provider } from '@auth0/auth0-react';
 // import { Provider } from 'react-redux'
 // import { configureStore, applyMiddleware, compose } from '@reduxjs/toolkit'
 // import thunk from 'redux-thunk'
@@ -18,13 +18,13 @@ const clientId = process.env.SRF_MIS_CLIENT_ID
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Auth0Provider
+  <React.StrictMode
   domain={domain}
   clientId={clientId}
   redirectUri={window.location.origin}
   >
     <App />
-  </Auth0Provider>
+  </React.StrictMode>
 );
 
 serviceWorker.unregister();
