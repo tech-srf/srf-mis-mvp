@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { useNavigate } from "react-router";
-// import PrimaryList from "./primaryList";
+import { useNavigate } from "react-router"
+import Search from "../components/Search"
+// import PrimaryList from "./primaryList"
 
 
 const Clinic = () => {
@@ -58,15 +59,7 @@ const Clinic = () => {
 
     return (
         <div className="attendance-card">
-            <div>
-                <input 
-                    className="form-control-search p-2 m-3" 
-                    type="text" 
-                    placeholder="Search for Player.." 
-                    aria-label="Search for Player.."
-                    aria-describedby="btnNavbarSearch"
-                />
-            </div>
+            <Search />
             <>
             <h3>Add Players Performance Record</h3>
                 <form onSubmit={onSubmit}>

@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react'
 import Image from '../assets/img/man.png'
 import { useNavigate } from "react-router"
-
+import Search from "../components/Search"
 
 const Class8 = () => {
 
@@ -64,25 +64,21 @@ const Class8 = () => {
     }    
     return (
         <div>
-                <div>
-                    <input className="form-control-search p-2 m-3" type="text" placeholder="Search for..." aria-label="Search for..."
-                        aria-describedby="btnNavbarSearch"
-                    />
-                </div>
-                    <div class="card shadow-sm mb-4">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img className="img pt-5 mb-3" width="75%" src={Image} alt="" />
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
+            <Search />
+                <div class="card shadow-sm mb-4">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img className="img pt-5 mb-3" width="75%" src={Image} alt="" />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
                                     <h5 class="card-title">Players Name</h5>
                                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
+                </div> 
                     <>
                         <h3>Create New Class 8 Visit Record</h3>
                         <form onSubmit={onSubmit}>

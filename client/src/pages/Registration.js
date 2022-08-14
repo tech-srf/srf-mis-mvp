@@ -4,8 +4,9 @@ import BoxContainer  from '../components/BoxContainer'
 import { Form, Col  } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router"
 // import SignupCard from './signupCard'
+import Search from "../components/Search"
 
 const Registration = () => {
 
@@ -175,15 +176,7 @@ async function onSubmit(e) {
                 <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h2 className="h2 text-success">Player Registration</h2>
                 </div>
-                <div>
-                    <input 
-                        className="form-control-search p-2 m-3" 
-                        type="text" 
-                        placeholder="Search for player..." 
-                        aria-label="Search for..."
-                        aria-describedby="btnNavbarSearch"
-                    />
-                </div>
+                <Search />
                 {/* <SignupCard /> */}
                 <div className="card-group">
                     <div className="card mb-3">

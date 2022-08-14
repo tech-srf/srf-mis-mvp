@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import NavSideBar from '../components/NavSideBar'
 import BoxContainer  from '../components/BoxContainer'
 import { Fragment } from 'react'
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router"
+
 
 
 const Signup = () => {

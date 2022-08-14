@@ -2,7 +2,7 @@ import React, { useState, Fragment } from 'react'
 import NavSideBar from '../components/NavSideBar'
 import BoxContainer  from '../components/BoxContainer'
 import { useNavigate } from "react-router";
-
+import Search from "../components/Search"
 
 const Lifeskills = () => {
 
@@ -212,11 +212,10 @@ const Lifeskills = () => {
                     />
                     </div>
                 </form>
-                <div className="">
-                    <input className="form-control-search p-2 m-3" type="text" placeholder="Search for..." aria-label="Search for..."
-                        aria-describedby="btnNavbarSearch"
-                    />
-                </div>
+                <Search />
+                <br />
+                <br />
+                <br />
                 {/* <RegistrationList />   */}
                 {/* <div className="form-group row pt-2" controlId='submitButton'>
                     <div className="col-sm-4">

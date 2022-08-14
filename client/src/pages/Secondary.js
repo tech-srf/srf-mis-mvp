@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router";
 // import SecondaryList from "./secondaryList";
+import Search from "../components/Search"
 
 
 
@@ -72,15 +73,7 @@ const School = () => {
 
     return (
         <div className="attendance-card">
-            <div>
-                <input 
-                    className="form-control-search p-2 m-3" 
-                    type="text" 
-                    placeholder="Search for Player.." 
-                    aria-label="Search for Player.."
-                    aria-describedby="btnNavbarSearch"
-                />
-            </div>
+            <Search />
             <h3>Add Players Performance Record</h3>
             <form onSubmit={onSubmit}>
                 <div className="form-group">
