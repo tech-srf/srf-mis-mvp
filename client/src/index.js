@@ -4,13 +4,10 @@ import ReactDOM from 'react-dom/client';
 // import { Provider } from 'react-redux'
 // import { configureStore, applyMiddleware, compose } from '@reduxjs/toolkit'
 // import thunk from 'redux-thunk'
-
-import * as serviceWorker from './serviceWorker'
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import App from './App';
 import './index.css'
 
-const domain = process.env.SRF_MIS_DOMAIN;
-const clientId = process.env.SRF_MIS_CLIENT_ID
 
 // import rootReducer from './reducers'
 
@@ -18,14 +15,12 @@ const clientId = process.env.SRF_MIS_CLIENT_ID
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode
-  domain={domain}
-  clientId={clientId}
-  redirectUri={window.location.origin}
-  >
+  <React.StrictMode>
     <App />
   </React.StrictMode>
 );
 
-serviceWorker.unregister();
-
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://cra.link/PWA
+serviceWorkerRegistration.register();
