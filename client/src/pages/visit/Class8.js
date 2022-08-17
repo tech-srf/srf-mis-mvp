@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react'
-import Image from '../assets/img/man.png'
+import Image from '../../assets/img/man.png'
 import { useNavigate } from "react-router"
-import Search from "../components/Search"
+import Search from "../../components/Search"
 
 const Class8 = () => {
 

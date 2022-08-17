@@ -1,12 +1,12 @@
 import React, { useState, Fragment } from 'react'
-import NavSideBar from '../components/NavSideBar'
-import BoxContainer  from '../components/BoxContainer'
-import { Form, Col  } from 'react-bootstrap'
-import Row from 'react-bootstrap/Row'
+import NavSideBar from '../../components/NavSideBar'
+import BoxContainer  from '../../components/BoxContainer'
+import { Col  } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 import { useNavigate } from "react-router"
-// import SignupCard from './signupCard'
-import Search from "../components/Search"
+import Search from "../../components/Search"
+import FileUpload from '../../components/FileUpload'
+import { Link } from "react-router-dom";
 
 const Registration = () => {
 
@@ -15,7 +15,7 @@ const Registration = () => {
         schoolname: "",
         academiclevel: "",
         classlevel: "",
-        relationship: "",
+        relationshiphh: "",
         maritalstatus: "",
         deceasedrelationship: "",
         yearofdeath:"",
@@ -107,7 +107,7 @@ async function onSubmit(e) {
         schoolname: "",
         academiclevel: "",
         classlevel: "",
-        relationship: "",
+        relationshiphh: "",
         maritalstatus: "",
         deceasedrelationship: "",
         yearofdeath:"",
@@ -174,9 +174,17 @@ async function onSubmit(e) {
         <NavSideBar />
             <BoxContainer>
                 <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h2 className="h2 text-success">Player Registration</h2>
+                    <div className="row">
+                        <div className="col">
+                            <h3 className="text-success">Registration</h3>
+                        </div>
+                        <div className="col">
+                            <Link to="/profiles" className="btn btn-success">
+                                View Record
+                            </Link>
+                        </div>
+                    </div>
                 </div>
-                <Search />
                 {/* <SignupCard /> */}
                 <div className="card-group">
                     <div className="card mb-3">
@@ -189,6 +197,7 @@ async function onSubmit(e) {
                         </div>
                     </div>
                 </div>
+                <form onSubmit={onSubmit}>
                 <div className="form-group">
                     <label>Registration Date</label>
                     <input
@@ -239,7 +248,7 @@ async function onSubmit(e) {
                         checked={form.academiclevel === "Class"}
                         onChange={(e) => updateForm({ academiclevel: e.target.value })}
                         />
-                        <text htmlFor="levelClass" className="form-check-text">Class</text>
+                        <label htmlFor="levelClass" className="form-check-text">Class</label>
                     </div>
                     <div className="form-check form-check-inline">
                         <input
@@ -251,7 +260,7 @@ async function onSubmit(e) {
                         checked={form.academiclevel === "Grade"}
                         onChange={(e) => updateForm({ academiclevel: e.target.value })}
                         />
-                        <text htmlFor="levelGrade" className="form-check-text">Grade</text>
+                        <label htmlFor="levelGrade" className="form-check-text">Grade</label>
                     </div>
                     <div className="form-check form-check-inline">
                         <input
@@ -263,7 +272,7 @@ async function onSubmit(e) {
                         checked={form.academiclevel === "Form"}
                         onChange={(e) => updateForm({ academiclevel: e.target.value })}
                         />
-                        <text htmlFor="levelForm" className="form-check-text">Form</text>
+                        <label htmlFor="levelForm" className="form-check-text">Form</label>
                     </div>
                 </div>
                 <div className="form-group">
@@ -284,9 +293,9 @@ async function onSubmit(e) {
                 <div className="form-group">
                     <select 
                         className="form-control"
-                        id="relationship"
-                        value={form.relationship}
-                        onChange={(e) => updateForm({ relationship: e.target.value })}
+                        id="relationshiphh"
+                        value={form.relationshiphh}
+                        onChange={(e) => updateForm({ relationshiphh: e.target.value })}
                     >
                         <option>Relationship of the care giver to the beneficiary</option>
                         <option value="Father">Father</option>
@@ -449,7 +458,7 @@ async function onSubmit(e) {
                         value="Bed"
                         onChange={(e) => updateForm({ bed: e.target.value })}
                         />
-                        <text htmlFor="bed" className="form-check">Bed</text>
+                        <label htmlFor="bed" className="form-check">Bed</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -460,7 +469,7 @@ async function onSubmit(e) {
                         value="Mattress"
                         onChange={(e) => updateForm({ mattress: e.target.value })}
                         />
-                        <text htmlFor="mattress" className="form-check">Mattress</text>
+                        <label htmlFor="mattress" className="form-check">Mattress</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -471,7 +480,7 @@ async function onSubmit(e) {
                         value="Beddings"
                         onChange={(e) => updateForm({ beddings: e.target.value })}
                         />
-                        <text htmlFor="beddings" className="form-check">Beddings</text>
+                        <label htmlFor="beddings" className="form-check">Beddings</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -482,7 +491,7 @@ async function onSubmit(e) {
                         value="Furniture"
                         onChange={(e) => updateForm({ furniture: e.target.value })}
                         />
-                        <text htmlFor="furniture" className="form-check">Furniture</text>
+                        <label htmlFor="furniture" className="form-check">Furniture</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -493,7 +502,7 @@ async function onSubmit(e) {
                         value="Stove"
                         onChange={(e) => updateForm({ stove: e.target.value })}
                         />
-                        <text htmlFor="stove" className="form-check">Stove</text>
+                        <label htmlFor="stove" className="form-check">Stove</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -504,7 +513,7 @@ async function onSubmit(e) {
                         value="Gas Cooker"
                         onChange={(e) => updateForm({ gascooker: e.target.value })}
                         />
-                        <text htmlFor="gascooker" className="form-check">Gas Cooker</text>
+                        <label htmlFor="gascooker" className="form-check">Gas Cooker</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -515,7 +524,7 @@ async function onSubmit(e) {
                         value="Electricity"
                         onChange={(e) => updateForm({ electricity: e.target.value })}
                         />
-                        <text htmlFor="electricity" className="form-check">Electricity</text>
+                        <label htmlFor="electricity" className="form-check">Electricity</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -526,7 +535,7 @@ async function onSubmit(e) {
                         value="Solar Lamp"
                         onChange={(e) => updateForm({ solarlamp: e.target.value })}
                         />
-                        <text htmlFor="solarlamp" className="form-check">Solar Lamp</text>
+                        <label htmlFor="solarlamp" className="form-check">Solar Lamp</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -537,7 +546,7 @@ async function onSubmit(e) {
                         value="Television"
                         onChange={(e) => updateForm({ television: e.target.value })}
                         />
-                        <text htmlFor="television" className="form-check">Television</text>
+                        <label htmlFor="television" className="form-check">Television</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -548,7 +557,7 @@ async function onSubmit(e) {
                         value="Radio"
                         onChange={(e) => updateForm({ radio: e.target.value })}
                         />
-                        <text htmlFor="radio" className="form-check">Radio</text>
+                        <label htmlFor="radio" className="form-check">Radio</label>
                     </div>
                     <div className="form-check form-check-block">
                         <input
@@ -559,7 +568,7 @@ async function onSubmit(e) {
                         value="Fridge"
                         onChange={(e) => updateForm({ fridge: e.target.value })}
                         />
-                        <text htmlFor="fridge" className="form-check">Fridge</text>
+                        <label htmlFor="fridge" className="form-check">Fridge</label>
                     </div>  
                 </div>
                 <div className="form-group">
@@ -886,7 +895,7 @@ async function onSubmit(e) {
                     checked={form.parentalaction === "I keep silent and assume nothing happens"}
                     onChange={(e) => updateForm({ parentalaction: e.target.value })}
                     />
-                    <text htmlFor="nothing" className="form-check">I keep silent and assume nothing happens</text>
+                    <label htmlFor="nothing" className="form-check">I keep silent and assume nothing happens</label>
                 </div>
                 <div className="form-check">
                     <input
@@ -898,7 +907,7 @@ async function onSubmit(e) {
                     checked={form.parentalaction === "I react and fight back most of the time (quarrel)"}
                     onChange={(e) => updateForm({ parentalaction: e.target.value })}
                     />
-                    <text htmlFor="fightback" className="form-check">I react and fight back most of the time (quarrel)</text>
+                    <label htmlFor="fightback" className="form-check">I react and fight back most of the time (quarrel)</label>
                 </div>
                 <div className="form-check">
                     <input
@@ -910,7 +919,7 @@ async function onSubmit(e) {
                     checked={form.parentalaction === "I report him/her to the police"}
                     onChange={(e) => updateForm({ parentalaction: e.target.value })}
                     />
-                    <text htmlFor="reportpolice" className="form-check">I report him/her to the police</text>
+                    <label htmlFor="reportpolice" className="form-check">I report him/her to the police</label>
                 </div>
                 <div className="form-check">
                     <input
@@ -922,7 +931,7 @@ async function onSubmit(e) {
                     checked={form.parentalaction === "I report him/her to the church/ village leaders"}
                     onChange={(e) => updateForm({ parentalaction: e.target.value })}
                     />
-                    <text htmlFor="reportchurch" className="form-check">I report him/her to the church/ village leaders</text>
+                    <label htmlFor="reportchurch" className="form-check">I report him/her to the church/ village leaders</label>
                 </div>
             </div>
             <div>
@@ -964,7 +973,7 @@ async function onSubmit(e) {
                     value="Physical Abuse"
                     onChange={(e) => updateForm({ physicalabuse: e.target.value })}
                     />
-                    <text htmlFor="physicalabuse" className="form-check">Physical</text>
+                    <label htmlFor="physicalabuse" className="form-check">Physical</label>
                 </div>
                 <div className="form-check form-check-block">
                     <input
@@ -975,7 +984,7 @@ async function onSubmit(e) {
                     value="Sexual Abuse"
                     onChange={(e) => updateForm({ sexualabuse: e.target.value })}
                     />
-                    <text htmlFor="sexualabuse" className="form-check">Sexual</text>
+                    <label htmlFor="sexualabuse" className="form-check">Sexual</label>
                 </div>
                 <div className="form-check form-check-block">
                     <input
@@ -986,7 +995,7 @@ async function onSubmit(e) {
                     value="Negligence Abuse"
                     onChange={(e) => updateForm({ negligenceabuse: e.target.value })}
                     />
-                    <text htmlFor="negligenceabuse" className="form-check">Negligence</text>
+                    <label htmlFor="negligenceabuse" className="form-check">Negligence</label>
                 </div>
                 <div className="form-check form-check-block">
                     <input
@@ -997,7 +1006,7 @@ async function onSubmit(e) {
                     value="Emotional Abuse"
                     onChange={(e) => updateForm({ emotionalabuse: e.target.value })}
                     />
-                    <text htmlFor="emotionalabuse" className="form-check">Emotional</text>
+                    <label htmlFor="emotionalabuse" className="form-check">Emotional</label>
                 </div>
                 <div className="form-check form-check-block">
                     <input
@@ -1008,7 +1017,7 @@ async function onSubmit(e) {
                     value="Other Abuse"
                     onChange={(e) => updateForm({ otherabuse: e.target.value })}
                     />
-                    <text htmlFor="otherabuse" className="form-check">Other</text>
+                    <label htmlFor="otherabuse" className="form-check">Other</label>
                 </div>
                 <div className="form-check form-check-block">
                     <input
@@ -1019,7 +1028,7 @@ async function onSubmit(e) {
                     value="None"
                     onChange={(e) => updateForm({ none: e.target.value })}
                     />
-                    <text htmlFor="none" className="form-check">None</text>
+                    <label htmlFor="none" className="form-check">None</label>
                 </div>
             </div>
             <div className="form-group">
@@ -1265,7 +1274,7 @@ async function onSubmit(e) {
                         checked={form.vulerabilityscale === "Least Vulnerable"}
                         onChange={(e) => updateForm({ vulerabilityscale: e.target.value })}
                     />
-                    <text htmlFor="leastvulnerable" className="form-check">Least Vulnerable</text>
+                    <label htmlFor="leastvulnerable" className="form-check">Least Vulnerable</label>
                 </div>
                 <div className="form-check form-check-block">
                     <input
@@ -1277,7 +1286,7 @@ async function onSubmit(e) {
                         checked={form.vulerabilityscale === "Vulnerable"}
                         onChange={(e) => updateForm({ vulerabilityscale: e.target.value })}
                     />
-                    <text htmlFor="vulnerable" className="form-check">Vulnerable</text>
+                    <label htmlFor="vulnerable" className="form-check">Vulnerable</label>
                 </div>
                 <div className="form-check form-check-block">
                     <input
@@ -1289,7 +1298,7 @@ async function onSubmit(e) {
                         checked={form.vulerabilityscale === "Highly Vulnerable"}
                         onChange={(e) => updateForm({ vulerabilityscale: e.target.value })}
                     />
-                    <text htmlFor="highlyvulnerable" className="form-check">Highly Vulnerable</text>
+                    <label htmlFor="highlyvulnerable" className="form-check">Highly Vulnerable</label>
                 </div>
             </div>
             <div className="form-group">
@@ -1305,44 +1314,16 @@ async function onSubmit(e) {
             </div>
             <hr />
 {/* DOCUMENT UPLOADS */}
-            <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h5 className="section-header text-success">Document uploads</h5>
-            </div>
-            <div className='card-body'>
-                <p className="card-text mt-4">
-                    SRF has a duty of care for the children and will be responsible to ensure child safety
-                    and cover medical cost related to rugby injuries.
-                </p>
-                <strong>
-                Required documents for registration. Take a picture of the following items
-                </strong>
-                    <ul>
-                        <li>Copy of child birth certificate.</li>
-                        <li>Copy of parents/guardian id.</li>
-                        <li>Passport size photo.</li>
-                        <li>Exam results copy.</li>
-                    </ul>
-                <div className="mb-3">
-                    <label>Upload Multiple Files</label>
-                    <Form.Control type="file" multiple />
-                </div>
-                <div className="form-group row pt-2">
-                    <div className="col-sm-4">
-                        <button type="submit" className="btn btn-success mb-4">Upload</button>
-                    </div>
-                </div>
-            </div>
+            <FileUpload />
             <hr />
 {/* FORM SUBMIT */}
             <div className="form-group row pt-2">
-                    <div className="col-sm-4">
-                        <button type="submit" className="btn btn-success mb-4">Submit</button>
-                    </div>
-                    <div className="col-sm-4">
-                        <button type="submit" className="btn btn-success mb-4">View Record</button>
-                    </div>
+                <div className="col-sm-4">
+                    <button type="submit" className="btn btn-success mb-4">Submit</button>
+                </div>
             </div>
             <br />
+            </form>
             </BoxContainer>
         </Fragment>
     )

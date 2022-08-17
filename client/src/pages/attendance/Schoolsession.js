@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-import Image from '../assets/img/man.png'
-import BoxContainer from '../components/BoxContainer'
 import { useNavigate } from "react-router";
 import SchoolsessionList from "./schoolsessionList"
-import Search from "../components/Search"
-
-
+import Search from "../../components/Search"
+// import Image from '../assets/img/man.png'
+// import BoxContainer from '../components/BoxContainer'
 
 const School = () => {
     const [form, setForm] = useState({
@@ -57,7 +55,7 @@ const School = () => {
 
     return (
         <div className="attendance-card">
-               <Search /> 
+            <Search /> 
             <form onSubmit={onSubmit}>
                 <div className="form-group">
                     <input
@@ -114,7 +112,7 @@ const School = () => {
                                 <option value="Korogocho">Korogocho</option>
                                 <option value="Mathare">Mathare</option>
                                 <option value="Ngewe">Ngewe</option>
-                                <option value="Tatucity">Tatu City</option>
+                                <option value="Tatu City">Tatu City</option>
                             </select>            
                             </div>
                             <div className="form-group">
@@ -148,6 +146,9 @@ const School = () => {
                             />
                             </div>
                             <SchoolsessionList />
+                            <br />
+                            <br />
+                            <br />
                     </form>
         </div>
     )

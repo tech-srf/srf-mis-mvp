@@ -1,9 +1,9 @@
 import React, { useState, Fragment } from 'react'
-import Image from '../assets/img/man.png'
-import NavSideBar from '../components/NavSideBar'
-import BoxContainer  from '../components/BoxContainer'
+import Image from '../../assets/img/man.png'
+import NavSideBar from '../../components/NavSideBar'
+import BoxContainer  from '../../components/BoxContainer'
 import { useNavigate } from "react-router"
-import Search from "../components/Search"
+import Search from "../../components/Search"
 
 const Counseling = () => {
 

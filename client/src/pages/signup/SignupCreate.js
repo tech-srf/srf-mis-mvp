@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import NavSideBar from '../components/NavSideBar'
-import BoxContainer  from '../components/BoxContainer'
+import NavSideBar from '../../components/NavSideBar'
+import BoxContainer  from '../../components/BoxContainer'
 import { Fragment } from 'react'
-import { useNavigate } from "react-router"
+import { useNavigate, useParams } from "react-router"
+import { Link } from 'react-router-dom'
 
 
 
@@ -19,6 +20,10 @@ const Signup = () => {
         clinic:"",
         team:"",
     });
+    
+    const { id } = useParams("");
+    console.log(id);
+
     const navigate = useNavigate();
 
  // These methods will update the state properties.
@@ -68,7 +73,16 @@ async function onSubmit(e) {
             <NavSideBar />
             <BoxContainer>
             <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h2 className="h2 text-success">Sign Up Player</h2>
+                <div className="row">
+                    <div className="col">
+                    <h3 className="text-success">Sign Up Player</h3>
+                    </div>
+                    <div className="col">
+                        <Link to="/signup" className="btn btn-success">
+                        View Signups
+                        </Link>
+                    </div>
+                </div>
             </div>
 
             <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -194,13 +208,11 @@ async function onSubmit(e) {
             </select>            
             </div>
             <div className="form-group">
-            <input
-                type="submit"
-                value="Sign up player"
-                className="btn btn-success"
-            />
+                <Link to="/signup" className="btn btn-success">
+                Sign up player
+                </Link>
             </div>
-        </form>
+            </form>
             </BoxContainer>
             <br />
         </Fragment>

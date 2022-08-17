@@ -1,6 +1,6 @@
 import React from 'react'
-import NavSideBar from '../components/NavSideBar'
-import Image from '../assets/img/man.png'
+import NavSideBar from '../../components/NavSideBar'
+// import Image from '../assets/img/man.png'
 
 function Profile() {
     return (

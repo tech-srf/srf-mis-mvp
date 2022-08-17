@@ -5,17 +5,20 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // import Login from './pages/auth/Login'
 // import Create from './pages/auth/Create'
 import Admin from './pages/Admin'
-import Attendance from './pages/Attendance'
-import Counseling from './pages/Counseling'
+import Attendance from './pages/attendance/Attendance'
+import Counseling from './pages/counseling/Counseling'
 
 import Dashboard from './pages/Dashboard'
-import Profile from './pages/Profile'
-import Registration from './pages/Registration'
+import Profiles from './pages/profiles/Profiles'
+import Profile from './pages/profiles/Profile'
+import Registration from './pages/registration/Registration'
 import Settings from './pages/Settings'
-import Signup from './pages/Signup'
-import Visits from './pages/Visits'
+import Signup from './pages/signup/Signup'
+import SignupCreate from './pages/signup/SignupCreate'
+import SignupCard from './pages/signup/signupCard'
+import Visits from './pages/visit/Visits'
 import Landing from './pages/Landing'
-import Education from './pages/Education'
+import Education from './pages/education/Education'
 import Lifeskills from './pages/Lifeskills'
 // import { LOGOUT } from './actions/types';
 import './custom.scss';
@@ -57,10 +60,13 @@ const App = () => {
             <Route exact path="/dashboard" element={<Dashboard />} />
             <Route exact path="/education" element={<Education />} />
             <Route exact path="/lifeskills" element={<Lifeskills />} />
+            <Route exact path="/profiles" element={<Profiles />} />
             <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/registration" element={<Registration />} />
             <Route exact path="/settings" element={<Settings />} />
             <Route exact path="/signup" element={<Signup />} />
+            <Route exact path="/signupcreate" element={<SignupCreate />} />
+            <Route exact path="/signupcard" element={<SignupCard />} />
         </Routes>
       </BrowserRouter>
       {/* <Router>

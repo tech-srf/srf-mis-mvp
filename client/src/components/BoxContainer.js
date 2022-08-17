@@ -4,8 +4,8 @@ import { Container , Row, Col} from 'react-bootstrap'
 const BoxContainer = ({children}) => {
     return (
         <Container>
-            <Row className="justify-content-md-center">
-                <Col xs={12} s={8} md={6}>
+            <Row className="justify-content-md-center m-4">
+                <Col xs={14} s={12} md={8}>
                     {children}
                 </Col>
             </Row>

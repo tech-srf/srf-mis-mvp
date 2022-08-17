@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-//import { Link } from "react-router-dom";
+import BoxContainer from "../../components/BoxContainer";
+import { Link } from "react-router-dom";
+import NavSideBar from "../../components/NavSideBar";
 
 
 
@@ -7,7 +9,7 @@ const Signup = (props) => (
   <div class="card-group">
     <div class="card mb-3">
       <div class="card-body">
-      <h5 class="card-title">Player Names: {props.signup.name} {props.signup.middlename} {props.signup.lastname}</h5>
+      <h5 class="card-title">Player Names: {props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</h5>
       <p class="card-text">Caregiver's Name: {props.signup.caregivernames}</p>
       <p class="card-text">Relationship: {props.signup.relationship}</p>
       <p class="card-text">Clinic: {props.signup.clinic}</p>
@@ -66,26 +68,30 @@ export default function SignupCard() {
   // This following section will display the table with the signups of individuals.
   return (
     <div>
-      <h3>Signed Up Players</h3>
-      <div>
-        <input
-          type="submit"
-          value="Add a new player"
-          className="btn btn-success"
-        />
-      </div>
-      
-      <table className="table table-striped" style={{ marginTop: 20 }}>
-        {/* <thead>
-          <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Level</th>
-            <th>Action</th>
-          </tr>
-        </thead> */}
-        <tbody>{signupCard()}</tbody>
-      </table>
+      <NavSideBar />
+        <BoxContainer>
+        <div className="row d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <div className="col">
+              <h3 className="h3">Signed Up Players</h3>
+          </div>
+          <div className="col">
+              <Link to="/registration" className="btn btn-success">
+                  Register new player
+              </Link>
+          </div>
+        </div>
+          <table className="table table-striped" style={{ marginTop: 20 }}>
+            {/* <thead>
+              <tr>
+                <th>Names</th>
+                <th>Position</th>
+                <th>Level</th>
+                <th>Action</th>
+              </tr>
+            </thead> */}
+            <tbody>{signupCard()}</tbody>
+          </table>
+        </BoxContainer>
     </div>
   );
 }

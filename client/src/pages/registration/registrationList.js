@@ -1,17 +1,5 @@
- // "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
+import React, { useEffect, useState } from "react"
 
-
- <!-- SECRET='_PrmYo0g_zifGHgTT0GcCjwCurhEe9UJpLym0S_es_7r054ED3pRHn6V4zQQ1jGB'
-PORT=3000
-SKIP_PREFLIGHT_CHECK=true -->
-
-
-<!-- <i class="bi bi-eye-fill"></i> Eye Icon  -->
-
-
-
-import React, { useEffect, useState } from "react";
-//import { Link } from "react-router-dom";
 
 const Registration = (props) => (
 

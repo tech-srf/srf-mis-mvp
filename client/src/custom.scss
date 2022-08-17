@@ -121,6 +121,17 @@ body {
 		border-top-right-radius: 0;
 	}
 }
+
+.form-check-input {
+	padding: 10px;
+	margin-left: 5px;
+}
+
+.form-check {
+	color: #212925;
+	font-weight: 300;
+}
+
 .w-100 {
     background-color: #018934;
     color: #ffffff;
@@ -142,8 +153,6 @@ body {
 
 
 //Navbar
-
-
 .nav-item {
     // min-height: 40px;
     font-size: 14px;
@@ -200,6 +209,7 @@ body {
 body {
 	height: 100%;
 }
+
 .cover-container {
 	max-width: 100%;
 	height: 100%;
@@ -232,6 +242,7 @@ label {
 	padding-left: 20px;
 	margin-right: -5px;
 }
+
 h3 {
 	padding-left: 30px;
 }

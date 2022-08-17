@@ -1,12 +1,12 @@
 import React, { useState, Fragment } from 'react'
-import NavSideBar from '../components/NavSideBar'
-import BoxContainer  from '../components/BoxContainer'
+import NavSideBar from '../../components/NavSideBar'
+import BoxContainer  from '../../components/BoxContainer'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import Primary from './Primary'
-import Secondary from './Secondary'
+import Clinic from './Clinicsesssion'
+import School from './Schoolsession'
 
-const Education = () => {
+const Attendance = () => {
     const [key, setKey] = useState('Clinic');
     
 
@@ -15,21 +15,21 @@ const Education = () => {
             <NavSideBar />
             <BoxContainer>
             <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h2 className="h2 text-success">Education Records</h2>
+                <h2 className="h2 text-success">Attendance</h2>
             </div>
-            {/* PRIMARY TAB */}
+            {/* CLINIC TAB */}
             <Tabs
                 id="controlled-tab-example"
                 activeKey={key}
                 onSelect={(k) => setKey(k)}
                 className="mb-3"
             >
-                <Tab eventKey="clinic" title="Primary">
-                    <Primary />
+                <Tab eventKey="clinic" title="Clinic">
+                    <Clinic />
                 </Tab>
-            {/* SECONDARY TAB */}
-                <Tab eventKey="school" title="Secondary">
-                    <Secondary />
+{/* SCHOOL TAB */}
+                <Tab eventKey="school" title="School">
+                    <School />
                 </Tab>
             </Tabs>
             </BoxContainer>
@@ -38,4 +38,4 @@ const Education = () => {
     )
 }
 
-export default Education
+export default Attendance
