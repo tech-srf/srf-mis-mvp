@@ -4,7 +4,6 @@ import BoxContainer  from '../../components/BoxContainer'
 import { Col  } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 import { useNavigate } from "react-router"
-import Search from "../../components/Search"
 import FileUpload from '../../components/FileUpload'
 import { Link } from "react-router-dom";
 
@@ -28,6 +27,17 @@ const Registration = () => {
         yearsatresidence: "",
         homecondition: "",
         homesize: "",
+        assetbed:"",
+        assetmattress:"",
+        assetbeddings:"",
+        assetfurniture:"",
+        assetstove:"",
+        assetgascooker:"",
+        assetelectricity:"",
+        assetsolarlamp:"",
+        assettelevision:"",
+        assetradio:"",
+        assetfridge:"",
         childrensleep: "",
         wateraccess: "",
         ammenitiesaccess: "",
@@ -120,6 +130,17 @@ async function onSubmit(e) {
         yearsatresidence: "",
         homecondition: "",
         homesize: "",
+        assetbed:"",
+        assetmattress:"",
+        assetbeddings:"",
+        assetfurniture:"",
+        assetstove:"",
+        assetgascooker:"",
+        assetelectricity:"",
+        assetsolarlamp:"",
+        assettelevision:"",
+        assetradio:"",
+        assetfridge:"",
         childrensleep: "",
         wateraccess: "",
         ammenitiesaccess: "",
@@ -185,8 +206,7 @@ async function onSubmit(e) {
                         </div>
                     </div>
                 </div>
-                {/* <SignupCard /> */}
-                <div className="card-group">
+                {/* <div className="card-group">
                     <div className="card mb-3">
                         <div className="card-body">
                             <h5 className="card-title">Player Names: </h5>
@@ -196,7 +216,7 @@ async function onSubmit(e) {
                             <p className="card-text">Team: </p>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <form onSubmit={onSubmit}>
                 <div className="form-group">
                     <label>Registration Date</label>
@@ -244,7 +264,7 @@ async function onSubmit(e) {
                         type="checkbox"
                         name="levelOptions"
                         id="levelClass"
-                        value="grade"
+                        value="Class"
                         checked={form.academiclevel === "Class"}
                         onChange={(e) => updateForm({ academiclevel: e.target.value })}
                         />
@@ -256,7 +276,7 @@ async function onSubmit(e) {
                         type="checkbox"
                         name="levelOptions"
                         id="levelGrade"
-                        value="grade"
+                        value="Grade"
                         checked={form.academiclevel === "Grade"}
                         onChange={(e) => updateForm({ academiclevel: e.target.value })}
                         />
@@ -268,7 +288,7 @@ async function onSubmit(e) {
                         type="checkbox"
                         name="levelOptions"
                         id="levelForm"
-                        value="form"
+                        value="Form"
                         checked={form.academiclevel === "Form"}
                         onChange={(e) => updateForm({ academiclevel: e.target.value })}
                         />
@@ -809,9 +829,9 @@ async function onSubmit(e) {
                         <Button className="btn btn-success" sm="6">Add Family member</Button>
                     </Col>
                     <br />
-                    <Col>
+                    {/* <Col>
                         <Button className="btn btn-success" sm="6">Remove Family member</Button>
-                    </Col>
+                    </Col> */}
                 </div>
             </div>
             <div className="form-group">
@@ -1143,9 +1163,9 @@ async function onSubmit(e) {
                         <Button className="btn btn-success" sm="6">Add Beneficiary</Button>
                     </Col>
                     <br />
-                    <Col>
+                    {/* <Col>
                         <Button className="btn btn-success" sm="6">Remove Beneficiary</Button>
-                    </Col>
+                    </Col> */}
                 </div>
             </div>
             <hr />

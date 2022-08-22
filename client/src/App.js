@@ -10,8 +10,9 @@ import Counseling from './pages/counseling/Counseling'
 
 import Dashboard from './pages/Dashboard'
 import Profiles from './pages/profiles/Profiles'
-import Profile from './pages/profiles/Profile'
 import Registration from './pages/registration/Registration'
+// import RegistrationList from './pages/registration/RegistrationList'
+import RegistrationCard from './pages/registration/registrationCard'
 import Settings from './pages/Settings'
 import Signup from './pages/signup/Signup'
 import SignupCreate from './pages/signup/SignupCreate'
@@ -61,8 +62,9 @@ const App = () => {
             <Route exact path="/education" element={<Education />} />
             <Route exact path="/lifeskills" element={<Lifeskills />} />
             <Route exact path="/profiles" element={<Profiles />} />
-            <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/registration" element={<Registration />} />
+            <Route exact path="/profile" element={<RegistrationCard />} />
+            {/* <Route exact path="/registrationllist" element={<RegistrationList />} /> */}
             <Route exact path="/settings" element={<Settings />} />
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/signupcreate" element={<SignupCreate />} />

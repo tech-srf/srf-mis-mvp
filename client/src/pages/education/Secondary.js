@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router";
 // import SecondaryList from "./secondaryList";
-import Search from "../../components/Search"
 
 
 
@@ -74,7 +73,6 @@ const School = () => {
     return (
         <div className="attendance-card">
             <h3>Add Players Performance Record</h3>
-            <Search />
             <form onSubmit={onSubmit}>
                 <div className="form-group">
                     <input

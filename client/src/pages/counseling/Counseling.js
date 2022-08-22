@@ -3,7 +3,6 @@ import Image from '../../assets/img/man.png'
 import NavSideBar from '../../components/NavSideBar'
 import BoxContainer  from '../../components/BoxContainer'
 import { useNavigate } from "react-router"
-import Search from "../../components/Search"
 
 const Counseling = () => {
 
@@ -72,7 +71,6 @@ const Counseling = () => {
                     <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-2 border-bottom">
                         <h2 className="h2 text-success">Counseling Session</h2>
                     </div>
-                    <Search />
                     <div class="card shadow-sm mb-4">
                         <div class="row g-0">
                             <div class="col-md-4">

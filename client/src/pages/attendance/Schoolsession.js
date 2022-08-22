@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router";
 import SchoolsessionList from "./schoolsessionList"
-import Search from "../../components/Search"
 // import Image from '../assets/img/man.png'
 // import BoxContainer from '../components/BoxContainer'
 
@@ -55,7 +54,6 @@ const School = () => {
 
     return (
         <div className="attendance-card">
-            <Search /> 
             <form onSubmit={onSubmit}>
                 <div className="form-group">
                     <input

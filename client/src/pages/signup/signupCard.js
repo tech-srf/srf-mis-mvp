@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import BoxContainer from "../../components/BoxContainer";
+import BoxContainer from "../../components/BoxContainer"
 import { Link } from "react-router-dom";
 import NavSideBar from "../../components/NavSideBar";
+
 
 
 
@@ -9,11 +10,13 @@ const Signup = (props) => (
   <div class="card-group">
     <div class="card mb-3">
       <div class="card-body">
-      <h5 class="card-title">Player Names: {props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</h5>
-      <p class="card-text">Caregiver's Name: {props.signup.caregivernames}</p>
-      <p class="card-text">Relationship: {props.signup.relationship}</p>
-      <p class="card-text">Clinic: {props.signup.clinic}</p>
-      <p class="card-text">Team: {props.signup.team}</p>
+      <h5 class="card-title">Names: {props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</h5>
+      <p class="card-subtitle">Gender: {props.signup.gender}</p>
+      <p class="card-subtitle">Caregiver: {props.signup.caregivernames}</p>
+      <p class="card-subtitle">Relationship: {props.signup.relationship}</p>
+      <p class="card-subtitle">Phone Number: {props.signup.phonenumber}</p>
+      <p class="card-subtitle">Clinic: {props.signup.clinic}</p>
+      <p class="card-subtitle">Team: {props.signup.team}</p>
       </div>
     </div>
   </div>

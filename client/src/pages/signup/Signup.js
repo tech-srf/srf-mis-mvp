@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import NavSideBar from '../../components/NavSideBar'
 import BoxContainer  from '../../components/BoxContainer'
-import Search  from '../../components/Search'
 import { Fragment } from 'react'
-import { useNavigate, useParams } from "react-router"
+import { useNavigate } from "react-router"
 import { Link } from 'react-router-dom'
 import SignupList from './signupList';
 
@@ -28,16 +27,18 @@ const Signup = () => {
 
     const navigate = useNavigate();
 
- // These methods will update the state properties.
+ //These methods will update the state properties.
+ // eslint-disable-next-line 
     function updateForm(value) {
         return setForm((prev) => {
         return { ...prev, ...value };
         });
     }
 
-      // This function will handle the submission.
-async function onSubmit(e) {
-    e.preventDefault();
+      // This function will handle the submission. 
+      // eslint-disable-next-line 
+    async function onSubmit(e) {
+        e.preventDefault();
 
     // When a post request is sent to the create url, we'll add a new record to the database.
     const newPlayer = { ...form };
@@ -86,7 +87,6 @@ async function onSubmit(e) {
                     </div>
                 </div>
             </div>
-            <Search />
                 <SignupList />
             </BoxContainer>
             <br />

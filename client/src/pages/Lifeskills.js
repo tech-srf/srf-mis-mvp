@@ -2,7 +2,6 @@ import React, { useState, Fragment } from 'react'
 import NavSideBar from '../components/NavSideBar'
 import BoxContainer  from '../components/BoxContainer'
 import { useNavigate } from "react-router";
-import Search from "../components/Search"
 
 const Lifeskills = () => {
 
@@ -212,7 +211,6 @@ const Lifeskills = () => {
                     />
                     </div>
                 </form>
-                <Search />
                 <br />
                 <br />
                 <br />

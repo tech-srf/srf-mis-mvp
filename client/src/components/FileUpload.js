@@ -1,5 +1,6 @@
 import React from 'react'
 import { Form } from 'react-bootstrap'
+import { Link } from "react-router-dom"
 
 function FileUpload() {
     return (
@@ -24,9 +25,11 @@ function FileUpload() {
             <div className="mb-3 mt-3">
                 <Form.Control method="POST" type="file" multiple  />
             </div>
-            <div className="form-group row pt-2">
-                <div className="col-sm-4">
-                    <input type="submit" method="POST" value="Attach" className="btn btn-success"/>
+            <div className="form-group row p-2">
+                <div className="col-sm-4 p-">
+                    <Link to="/profiles" className="btn btn-success" type="submit" method="POST" >
+                        Attach
+                    </Link>
                 </div>
             </div>
         </div>

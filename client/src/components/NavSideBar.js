@@ -1,6 +1,7 @@
 import React from 'react'
 import './navsidebar.css'
 import Logo from "../assets/img/logo.png"
+import Search from "../components/Search"
 
 function NavSideBar() {
     return (
@@ -9,6 +10,7 @@ function NavSideBar() {
                 <a className="navbar-brand col-md-3 col-lg-2 me-0 px-1" href="/">
                     <img src={Logo} alt="" width="150" height="57" />
                 </a>
+                <Search />
                 <button className="navbar-toggler position-absolute d-md-none collapsed mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

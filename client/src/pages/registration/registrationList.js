@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 
 
 const Registration = (props) => (
@@ -6,9 +7,9 @@ const Registration = (props) => (
 
     <tr>
         <td>{props.registration.firstname} {props.registration.middlename} {props.registration.lastname}</td>
-        <td>{props.registration.team}</td>
+        <td>{props.registration.schoolname}</td>
         <td>{props.registration.clinic}</td>
-        <td><button className="btn btn-success">View</button></td>
+        <td><Link to="/registrationcard" className="btn btn-success">View</Link></td>
         {/* <td>
         <Link className="btn btn-link" to={`/edit/${props.signup._id}`}>Edit</Link> |
         <button className="btn btn-link"
@@ -76,7 +77,7 @@ const Registration = (props) => (
             <tr>
                 {/* <th>Id</th> */}
                 <th>Names</th>
-                <th>Team</th>
+                <th>School</th>
                 <th>Clinic</th>
             </tr>
             </thead>

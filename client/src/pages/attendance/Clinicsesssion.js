@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router";
 import ClinicsessionList from "./clinicList";
-import Search from "../../components/Search"
 
 
 const Clinic = () => {
@@ -57,7 +56,6 @@ const Clinic = () => {
         <div className="attendance-card">
             <>
             <h3>Add new Player to Clinic Attendance</h3>
-            <Search />
                 <form onSubmit={onSubmit}>
                     <div className="form-group">
                         <input

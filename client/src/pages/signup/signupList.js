@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const Signup = (props) => (
 
-
     <tr>
         <td>{props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</td>
         <td>{props.signup.team}</td>

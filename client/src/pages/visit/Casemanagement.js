@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from 'react'
 import Image from '../../assets/img/manResized.png'
 import { useNavigate } from "react-router"
-import Search from "../../components/Search"
 
 const Casemanagement= () => {
 
@@ -53,7 +52,6 @@ const Casemanagement= () => {
     }
     return (
         <div>
-            <Search />
             <div class="card shadow-sm mb-4">
                         <div class="row g-0">
                             <div class="col-md-4">
