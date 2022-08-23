@@ -1,7 +1,7 @@
 import React from 'react'
 import './navsidebar.css'
 import Logo from "../assets/img/logo.png"
-import Search from "../components/Search"
+
 
 function NavSideBar() {
     return (
@@ -10,7 +10,7 @@ function NavSideBar() {
                 <a className="navbar-brand col-md-3 col-lg-2 me-0 px-1" href="/">
                     <img src={Logo} alt="" width="150" height="57" />
                 </a>
-                <Search />
+                
                 <button className="navbar-toggler position-absolute d-md-none collapsed mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -37,9 +37,16 @@ function NavSideBar() {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/registration">
-                            <span data-feather="shopping-cart"></span>
+                            <span data-feather="registration"></span>
                             <i className="bi bi-calendar2-check text-success px-1"></i>
                             Registration
+                            </a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/registration/uploads">
+                            <span data-feather="upload"></span>
+                            <i className="bi bi-upload text-success px-1"></i>
+                            Upload Docs
                             </a>
                         </li> 
                         <li className="nav-item">
@@ -59,7 +66,7 @@ function NavSideBar() {
                         <li className="nav-item">
                             <a className="nav-link" href="/counseling">
                             <span data-feather="layers"></span>
-                            <i className="bi bi-house-fill text-success px-1"></i>
+                            <i className="bi bi-person-hearttext-success px-1"></i>
                             Counseling
                             </a>
                         </li>
@@ -73,7 +80,7 @@ function NavSideBar() {
                         <li className="nav-item">
                             <a className="nav-link" href="lifeskills">
                             <span data-feather="layers"></span>
-                            <i className="bi bi-house-fill text-success px-1"></i>
+                            <i className="bi bi-tools text-success px-1"></i>
                             Lifeskills
                             </a>
                         </li>

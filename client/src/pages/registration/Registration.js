@@ -4,8 +4,8 @@ import BoxContainer  from '../../components/BoxContainer'
 import { Col  } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 import { useNavigate } from "react-router"
-import FileUpload from '../../components/FileUpload'
 import { Link } from "react-router-dom";
+
 
 const Registration = () => {
 
@@ -43,11 +43,21 @@ const Registration = () => {
         ammenitiesaccess: "",
         enviroment: "",
         foodcost: "",
-        frequency: "",
+        foodfrequency: "",
+        rentcost: "",
+        rentfrequency: "",
+        electricitycost: "",
+        electricityfrequency: "",
+        watercost: "",
+        waterfrequency: "",
+        toiletcost: "",
+        toiletfrequency: "",
+        medicalcost: "",
+        medicalfrequency: "",
         membername: "",
         memberrelationship: "",
         medicalconcern: "",
-        treatmentstatus: "",
+        membertreatmentstatus: "",
         nhif: "",
         nhifnumber: "",
         substanceabuse: "",
@@ -56,7 +66,7 @@ const Registration = () => {
         lenghtofabuse: "",
         parentalaction: "",
         briefsummary:"",
-        childrensbehaviour: "",
+        communitybehaviour: "",
         physicalabuse: "",
         sexualabuse: "",
         negligenceabuse: "",
@@ -146,11 +156,21 @@ async function onSubmit(e) {
         ammenitiesaccess: "",
         enviroment: "",
         foodcost: "",
-        frequency: "",
+        foodfrequency: "",
+        rentcost: "",
+        rentfrequency: "",
+        electricitycost: "",
+        electricityfrequency: "",
+        watercost: "",
+        waterfrequency: "",
+        toiletcost: "",
+        toiletfrequency: "",
+        medicalcost: "",
+        medicalfrequency: "",
         membername: "",
         memberrelationship: "",
         medicalconcern: "",
-        treatmentstatus: "",
+        membertreatmentstatus: "",
         nhif: "",
         nhifnumber: "",
         substanceabuse: "",
@@ -159,7 +179,7 @@ async function onSubmit(e) {
         lenghtofabuse: "",
         parentalaction: "",
         briefsummary:"",
-        childrensbehaviour: "",
+        communitybehaviour: "",
         physicalabuse: "",
         sexualabuse: "",
         negligenceabuse: "",
@@ -200,7 +220,7 @@ async function onSubmit(e) {
                             <h3 className="text-success">Registration</h3>
                         </div>
                         <div className="col">
-                            <Link to="/profiles" className="btn btn-success">
+                            <Link to="/profile" className="btn btn-success">
                                 View Record
                             </Link>
                         </div>
@@ -217,6 +237,7 @@ async function onSubmit(e) {
                         </div>
                     </div>
                 </div> */}
+                
                 <form onSubmit={onSubmit}>
                 <div className="form-group">
                     <label>Registration Date</label>
@@ -258,7 +279,7 @@ async function onSubmit(e) {
                 </div>
                 <div className="form-group">
                 <label>Select Academic level</label>
-                    <div className="form-check form-check-inline">
+                    <div className="form-check form-check-block">
                         <input
                         className="form-check-input"
                         type="checkbox"
@@ -270,7 +291,7 @@ async function onSubmit(e) {
                         />
                         <label htmlFor="levelClass" className="form-check-text">Class</label>
                     </div>
-                    <div className="form-check form-check-inline">
+                    <div className="form-check form-check-block">
                         <input
                         className="form-check-input"
                         type="checkbox"
@@ -282,7 +303,7 @@ async function onSubmit(e) {
                         />
                         <label htmlFor="levelGrade" className="form-check-text">Grade</label>
                     </div>
-                    <div className="form-check form-check-inline">
+                    <div className="form-check form-check-block">
                         <input
                         className="form-check-input"
                         type="checkbox"
@@ -349,6 +370,7 @@ async function onSubmit(e) {
                         <option value="Father">Father</option>
                         <option value="Mother">Mother</option>
                         <option value="Guardian">Guardian</option>
+                        <option value="Not Applicable">Not Applicable</option>
                     </select>            
                 </div>
                 <div className="form-group">
@@ -464,19 +486,20 @@ async function onSubmit(e) {
                         <option>Size of home</option>
                         <option value="Single room">Single Room</option>
                         <option value="Double room">Double Room</option>
-                        <option value="One bedroom">One Bedroom and above</option>
+                        <option value="One bedroom and above">One Bedroom and above</option>
                     </select>            
                 </div>
-                <div className="form-group">
+                
                 <label>Does this family posses the following services or assets? (Check all that apply)</label>
+                <div className="form-group">
                     <div className="form-check form-check-block">
                         <input
                         className="form-check-input"
                         type="checkbox"
-                        name="bed"
-                        id="bed"
+                        name="assetOptions"
+                        id="assetBed"
                         value="Bed"
-                        onChange={(e) => updateForm({ bed: e.target.value })}
+                        onChange={(e) => updateForm({ assetbed: e.target.value })}
                         />
                         <label htmlFor="bed" className="form-check">Bed</label>
                     </div>
@@ -484,10 +507,10 @@ async function onSubmit(e) {
                         <input
                         className="form-check-input"
                         type="checkbox"
-                        name="mattress"
-                        id="mattress"
+                        name="assetOptions"
+                        id="assetMattress"
                         value="Mattress"
-                        onChange={(e) => updateForm({ mattress: e.target.value })}
+                        onChange={(e) => updateForm({ assetmattress: e.target.value })}
                         />
                         <label htmlFor="mattress" className="form-check">Mattress</label>
                     </div>
@@ -495,10 +518,10 @@ async function onSubmit(e) {
                         <input
                         className="form-check-input"
                         type="checkbox"
-                        name="beddings"
-                        id="beddings"
+                        name="assetOptions"
+                        id="assetBeddings"
                         value="Beddings"
-                        onChange={(e) => updateForm({ beddings: e.target.value })}
+                        onChange={(e) => updateForm({ assetbeddings: e.target.value })}
                         />
                         <label htmlFor="beddings" className="form-check">Beddings</label>
                     </div>
@@ -506,10 +529,10 @@ async function onSubmit(e) {
                         <input
                         className="form-check-input"
                         type="checkbox"
-                        name="furniture"
-                        id="furniture"
+                        name="assetOptions"
+                        id="assetFurniture"
                         value="Furniture"
-                        onChange={(e) => updateForm({ furniture: e.target.value })}
+                        onChange={(e) => updateForm({ assetfurniture: e.target.value })}
                         />
                         <label htmlFor="furniture" className="form-check">Furniture</label>
                     </div>
@@ -517,10 +540,10 @@ async function onSubmit(e) {
                         <input
                         className="form-check-input"
                         type="checkbox"
-                        name="stove"
-                        id="stove"
+                        name="assetOptions"
+                        id="assetStove"
                         value="Stove"
-                        onChange={(e) => updateForm({ stove: e.target.value })}
+                        onChange={(e) => updateForm({ assetstove: e.target.value })}
                         />
                         <label htmlFor="stove" className="form-check">Stove</label>
                     </div>
@@ -528,10 +551,10 @@ async function onSubmit(e) {
                         <input
                         className="form-check-input"
                         type="checkbox"
-                        name="gascooker"
-                        id="gascooker"
+                        name="assetOptions"
+                        id="assetGascooker"
                         value="Gas Cooker"
-                        onChange={(e) => updateForm({ gascooker: e.target.value })}
+                        onChange={(e) => updateForm({ assetgascooker: e.target.value })}
                         />
                         <label htmlFor="gascooker" className="form-check">Gas Cooker</label>
                     </div>
@@ -539,10 +562,10 @@ async function onSubmit(e) {
                         <input
                         className="form-check-input"
                         type="checkbox"
-                        name="electricity"
-                        id="electricity"
+                        name="assetOptions"
+                        id="assetElectricity"
                         value="Electricity"
-                        onChange={(e) => updateForm({ electricity: e.target.value })}
+                        onChange={(e) => updateForm({ assetelectricity: e.target.value })}
                         />
                         <label htmlFor="electricity" className="form-check">Electricity</label>
                     </div>
@@ -550,10 +573,10 @@ async function onSubmit(e) {
                         <input
                         className="form-check-input"
                         type="checkbox"
-                        name="solarlamp"
-                        id="solarlamp"
+                        name="assetOptions"
+                        id="assetSolarlamp"
                         value="Solar Lamp"
-                        onChange={(e) => updateForm({ solarlamp: e.target.value })}
+                        onChange={(e) => updateForm({ assetsolarlamp: e.target.value })}
                         />
                         <label htmlFor="solarlamp" className="form-check">Solar Lamp</label>
                     </div>
@@ -561,10 +584,10 @@ async function onSubmit(e) {
                         <input
                         className="form-check-input"
                         type="checkbox"
-                        name="television"
-                        id="television"
+                        name="assetOptions"
+                        id="assetTelevision"
                         value="Television"
-                        onChange={(e) => updateForm({ television: e.target.value })}
+                        onChange={(e) => updateForm({ assettelevision: e.target.value })}
                         />
                         <label htmlFor="television" className="form-check">Television</label>
                     </div>
@@ -572,10 +595,10 @@ async function onSubmit(e) {
                         <input
                         className="form-check-input"
                         type="checkbox"
-                        name="radio"
-                        id="radio"
+                        name="assetOptions"
+                        id="assetRadio"
                         value="Radio"
-                        onChange={(e) => updateForm({ radio: e.target.value })}
+                        onChange={(e) => updateForm({ assetradio: e.target.value })}
                         />
                         <label htmlFor="radio" className="form-check">Radio</label>
                     </div>
@@ -583,10 +606,10 @@ async function onSubmit(e) {
                         <input
                         className="form-check-input"
                         type="checkbox"
-                        name="fridge"
-                        id="fridge"
+                        name="assetOptions"
+                        id="assetFridge"
                         value="Fridge"
-                        onChange={(e) => updateForm({ fridge: e.target.value })}
+                        onChange={(e) => updateForm({ assetfridge: e.target.value })}
                         />
                         <label htmlFor="fridge" className="form-check">Fridge</label>
                     </div>  
@@ -618,26 +641,26 @@ async function onSubmit(e) {
                     </select>            
                 </div>
                 <div className="form-group">
-                <label>Does the family have access to any of the following?</label>
                     <select 
                         className="form-control"
                         id="ammenitiesaccess"
                         value={form.ammenitiesaccess}
                         onChange={(e) => updateForm({ ammenitiesaccess: e.target.value })}
                     >
+                        <option>Does the family have access to any of the following?</option>
                         <option value="House Toilet">In house toilet</option>
                         <option value="Communal Toilet">Communal Toilet</option>
                         <option value="External Toilet">External Paid Toilet</option>
                     </select>            
                 </div>
                 <div className="form-group">
-                <label>What is the condition of the environment around the house?</label>
                     <select 
                         className="form-control"
                         id="enviroment"
                         value={form.enviroment}
                         onChange={(e) => updateForm({ enviroment: e.target.value })}
-                    >
+                    >                        
+                        <option>What is the condition of the environment around the house?</option>
                         <option value="Maintained">Well maintained</option>
                         <option value="Garbage">Garbage</option>
                         <option value="Open Sewage">Open sewage & drains present</option>
@@ -650,137 +673,173 @@ async function onSubmit(e) {
             </div>
             <label>How much does the family spend on the following needs?</label>
             <div className="form-group">
-                <text>Food</text>
-                <input
-                        className="form-control"
-                        type="text"
-                        name="foodcost"
-                        id="Ksh"
-                        value={form.foodcost}
-                        placeholder="Ksh"
-                        onChange={(e) => updateForm({ foodcost: e.target.value })}
-                />
-                <br />
-                <select 
-                    className="form-control"
-                    id="frequency"
-                    value={form.frequency}
-                    onChange={(e) => updateForm({ frequency: e.target.value })}
-                >
-                    <option value="Daily">Daily</option>
-                    <option value="Weekly">Weekly</option>
-                    <option value="Monthly">Monthly</option>
-                </select>            
+                <div className="row">
+                    <Col>Food</Col>
+                    <Col>
+                        <input
+                            className="form-control"
+                            type="text"
+                            name="foodcost"
+                            id="Ksh"
+                            value={form.foodcost}
+                            placeholder="Ksh"
+                            onChange={(e) => updateForm({ foodcost: e.target.value })}
+                        />
+                    </Col>
+                    <Col>
+                        <select 
+                            className="form-control"
+                            id="foodfrequency"
+                            value={form.foodfrequency}
+                            onChange={(e) => updateForm({ foodfrequency: e.target.value })}
+                        >   
+                            <option>Frequency</option>
+                            <option value="Daily">Daily</option>
+                            <option value="Weekly">Weekly</option>
+                            <option value="Monthly">Monthly</option>
+                        </select> 
+                    </Col>
+                </div>         
             </div>
             <div className="form-group">
-                <text>Rent</text>
-                <input
-                        className="form-control"
-                        type="text"
-                        name="rentcost"
-                        id="Ksh"
-                        placeholder="Ksh"
-                        onChange={(e) => updateForm({ rentcost: e.target.value })}
-                />
-                <br />
-                <select 
-                    className="form-control"
-                    id="frequency"
-                    value={form.frequency}
-                    onChange={(e) => updateForm({ frequency: e.target.value })}
-                >
-                    <option value="Daily">Daily</option>
-                    <option value="Weekly">Weekly</option>
-                    <option value="Monthly">Monthly</option>
-                </select>            
+                <div className="row">
+                    <Col>Rent</Col>
+                    <Col>
+                        <input
+                            className="form-control"
+                            type="text"
+                            name="rentcost"
+                            id="Ksh"
+                            placeholder="Ksh"
+                            onChange={(e) => updateForm({ rentcost: e.target.value })}
+                        />
+                    </Col>
+                    <Col>
+                        <select 
+                            className="form-control"
+                            id="rentfrequency"
+                            value={form.rentfrequency}
+                            onChange={(e) => updateForm({ rentfrequency: e.target.value })}
+                        >
+                            <option>Frequency</option>
+                            <option value="Daily">Daily</option>
+                            <option value="Weekly">Weekly</option>
+                            <option value="Monthly">Monthly</option>
+                        </select> 
+                    </Col>
+                </div>
             </div>
             <div className="form-group">
-                <text>Electricity</text>
-                <input
-                        className="form-control"
-                        type="text"
-                        name="electricitycost"
-                        id="Ksh"
-                        placeholder="Ksh"
-                        onChange={(e) => updateForm({ electricitycost: e.target.value })}
-                />
-                <br />
-                <select 
-                    className="form-control"
-                    id="frequency"
-                    value={form.frequency}
-                    onChange={(e) => updateForm({ frequency: e.target.value })}
-                >
-                    <option value="Daily">Daily</option>
-                    <option value="Weekly">Weekly</option>
-                    <option value="Monthly">Monthly</option>
-                </select>            
+                <div className="row">
+                    <Col>Electricity</Col>
+                    <Col>
+                        <input
+                            className="form-control"
+                            type="text"
+                            name="electricitycost"
+                            id="Ksh"
+                            placeholder="Ksh"
+                            onChange={(e) => updateForm({ electricitycost: e.target.value })}
+                        />
+                    </Col>
+                    <Col>
+                        <select 
+                            className="form-control"
+                            id="electricityfrequency"
+                            value={form.electricityfrequency}
+                            onChange={(e) => updateForm({ electricityfrequency: e.target.value })}
+                        >
+                            <option>Frequency</option>
+                            <option value="Daily">Daily</option>
+                            <option value="Weekly">Weekly</option>
+                            <option value="Monthly">Monthly</option>
+                        </select>
+                    </Col>
+                </div>
             </div>
             <div className="form-group">
-                <text>Water</text>
-                <input
-                        className="form-control"
-                        type="text"
-                        name="watercost"
-                        id="Ksh"
-                        placeholder="Ksh"
-                        onChange={(e) => updateForm({ watercost: e.target.value })}
-                />
-                <br />
-                <select 
-                    className="form-control"
-                    id="frequency"
-                    value={form.frequency}
-                    onChange={(e) => updateForm({ frequency: e.target.value })}
-                >
-                    <option value="Daily">Daily</option>
-                    <option value="Weekly">Weekly</option>
-                    <option value="Monthly">Monthly</option>
-                </select>            
+                <div className="row">
+                    <Col>Water</Col>
+                    <Col>
+                        <input
+                            className="form-control"
+                            type="text"
+                            name="watercost"
+                            id="Ksh"
+                            placeholder="Ksh"
+                            onChange={(e) => updateForm({ watercost: e.target.value })}
+                        />
+                    </Col>
+                    <Col>
+                        <select 
+                            className="form-control"
+                            id="waterfrequency"
+                            value={form.waterfrequency}
+                            onChange={(e) => updateForm({ waterfrequency: e.target.value })}
+                        >
+                            <option>Frequency</option>
+                            <option value="Daily">Daily</option>
+                            <option value="Weekly">Weekly</option>
+                            <option value="Monthly">Monthly</option>
+                        </select>
+                    </Col>
+                </div>           
             </div>
             <div className="form-group">
-                <text>Toilet</text>
-                <input
-                        className="form-control"
-                        type="text"
-                        name="toiletcost"
-                        id="Ksh"
-                        placeholder="Ksh"
-                        onChange={(e) => updateForm({ toiletcost: e.target.value })}
-                />
-                <br />
-                <select 
-                    className="form-control"
-                    id="frequency"
-                    value={form.frequency}
-                    onChange={(e) => updateForm({ frequency: e.target.value })}
-                >
-                    <option value="Daily">Daily</option>
-                    <option value="Weekly">Weekly</option>
-                    <option value="Monthly">Monthly</option>
-                </select>            
+                <div className="row">
+                    <Col>Toilet</Col>
+                    <Col>
+                        <input
+                            className="form-control"
+                            type="text"
+                            name="toiletcost"
+                            id="Ksh"
+                            placeholder="Ksh"
+                            onChange={(e) => updateForm({ toiletcost: e.target.value })}
+                        />   
+                    </Col>
+                    <Col>
+                        <select 
+                            className="form-control"
+                            id="toiletfrequency"
+                            value={form.toiletfrequency}
+                            onChange={(e) => updateForm({ toiletfrequency: e.target.value })}
+                        >
+                            <option>Frequency</option>
+                            <option value="Daily">Daily</option>
+                            <option value="Weekly">Weekly</option>
+                            <option value="Monthly">Monthly</option>
+                        </select>                         
+                    </Col>
+                </div>          
             </div>
             <div className="form-group">
-                <text>Medical</text>
-                <input
-                        className="form-control"
-                        type="text"
-                        name="medicalcost"
-                        id="Ksh"
-                        placeholder="Ksh"
-                        onChange={(e) => updateForm({ medicalcost: e.target.value })}
-                />
-                <br />
-                <select 
-                    className="form-control"
-                    id="frequency"
-                    value={form.frequency}
-                    onChange={(e) => updateForm({ frequency: e.target.value })}
-                >
-                    <option value="Daily">Daily</option>
-                    <option value="Weekly">Weekly</option>
-                    <option value="Monthly">Monthly</option>
-                </select>            
+                <div className="row">
+                    <Col>Medical</Col>
+                    <Col>
+                        <input
+                            className="form-control"
+                            type="text"
+                            name="medicalcost"
+                            id="Ksh"
+                            placeholder="Ksh"
+                            onChange={(e) => updateForm({ medicalcost: e.target.value })}
+                        />   
+                    </Col>
+                    <Col>
+                        <select 
+                            className="form-control"
+                            id="medicalfrequency"
+                            value={form.medicalfrequency}
+                            onChange={(e) => updateForm({ medicalfrequency: e.target.value })}
+                        >
+                            <option>Frequency</option>
+                            <option value="Daily">Daily</option>
+                            <option value="Weekly">Weekly</option>
+                            <option value="Monthly">Monthly</option>
+                        </select>                         
+                    </Col>
+                </div>          
             </div>
 {/* PHYSICAL HEALTH */}
             <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -818,15 +877,19 @@ async function onSubmit(e) {
                 <input
                     type="text"
                     className="form-control"
-                    id="treatmentstatus"
+                    id="membertreatmentstatus"
                     placeholder="Treatment Status"
-                    value={form.treatmentstatus}
-                    onChange={(e) => updateForm({ treatmentstatus: e.target.value })}
+                    value={form.membertreatmentstatus}
+                    onChange={(e) => updateForm({ membertreatmentstatus: e.target.value })}
                 />
                 <br />
                 <div className="mb-4">
                     <Col>
-                        <Button className="btn btn-success" sm="6">Add Family member</Button>
+                        <Button 
+                            className="btn btn-success" 
+                            sm="6"
+                            // onClick{...() => addFormFields()}
+                        >Add Family member</Button>
                     </Col>
                     <br />
                     {/* <Col>
@@ -953,6 +1016,18 @@ async function onSubmit(e) {
                     />
                     <label htmlFor="reportchurch" className="form-check">I report him/her to the church/ village leaders</label>
                 </div>
+                <div className="form-check">
+                    <input
+                    className="form-check-input"
+                    type="checkbox"
+                    name="actionOptions"
+                    id="actionNotApplicable"
+                    value="Not applicable"
+                    checked={form.parentalaction === "Not applicable"}
+                    onChange={(e) => updateForm({ parentalaction: e.target.value })}
+                    />
+                    <label htmlFor="reportchurch" className="form-check">Not applicable</label>
+                </div>
             </div>
             <div>
                 <textarea 
@@ -974,11 +1049,11 @@ async function onSubmit(e) {
                 <textarea 
                     className="form-control" 
                     row="5"
-                    id="childrensbehaviour"
+                    id="communitybehaviour"
                     placeholder="List some of the behaviors/concerns that you have observed in your 
                     community that would affect the well-being /welfare of your child/children?"
-                    value={form.childrensbehaviour}
-                    onChange={(e) => updateForm({ childrensbehaviour: e.target.value })}
+                    value={form.communitybehaviour}
+                    onChange={(e) => updateForm({ communitybehaviour: e.target.value })}
                     >
                 </textarea>
             </div>
@@ -1070,7 +1145,8 @@ async function onSubmit(e) {
                     id="childabuse"
                     value={form.childabuse}
                     onChange={(e) => updateForm({ childabuse: e.target.value })}
-                >
+                >   
+                    <option>Has any child in your household suffered any form of child abuse?</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
@@ -1149,15 +1225,6 @@ async function onSubmit(e) {
                     onChange={(e) => updateForm({ membershipstatus: e.target.value })}
                 />
                 <br />
-                <input
-                    type="text"
-                    className="form-control"
-                    id="treatmentstatus"
-                    placeholder="Treatment Status"
-                    value={form.treatmentstatus}
-                    onChange={(e) => updateForm({ treatmentstatus: e.target.value })}
-                />
-                <br />
                 <div className="mb-4">
                     <Col>
                         <Button className="btn btn-success" sm="6">Add Beneficiary</Button>
@@ -1173,7 +1240,6 @@ async function onSubmit(e) {
             <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h5 className="section-header text-success">Caregiver Consent</h5>
             </div>
-            <label className="mb-3"> As the concerned caregiver, do you prefer your child/children being involved in SRF programs? *(CONDITIONAL)</label>
             <div className="form-group">
                 <select 
                     className="form-control"
@@ -1181,6 +1247,7 @@ async function onSubmit(e) {
                     value={form.caregiversconsent}
                     onChange={(e) => updateForm({ caregiversconsent: e.target.value })}
                     >
+                    <option>As the concerned caregiver, do you prefer your child/children being involved in SRF programs? *(CONDITIONAL)</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
@@ -1334,7 +1401,7 @@ async function onSubmit(e) {
             </div>
             <hr />
 {/* DOCUMENT UPLOADS */}
-            <FileUpload />
+            
             <hr />
 {/* FORM SUBMIT */}
             <div className="form-group row pt-2">

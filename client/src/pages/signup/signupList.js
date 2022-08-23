@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import SearchFeature from '../../pages/SearchFeature'
 
 const Signup = (props) => (
 
@@ -24,6 +25,7 @@ const Signup = (props) => (
 
     export default function SignupList() {
     const [signups, setSignups] = useState([]);
+    
 
     // This method fetches the signups from the database.
     useEffect(() => {
@@ -70,7 +72,13 @@ const Signup = (props) => (
 
     // This following section will display the table with the signed up players.
     return (
+        
         <div className="table">
+        <div className="search-bar">
+            <SearchFeature 
+                // refreshFunction={updateSearchTerms}
+            />
+        </div>
         <table className="table table-striped" style={{ marginTop: 20 }}>
             <thead>
             <tr>

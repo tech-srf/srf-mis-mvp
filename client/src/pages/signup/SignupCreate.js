@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import NavSideBar from '../../components/NavSideBar'
 import BoxContainer  from '../../components/BoxContainer'
 import { Fragment } from 'react'
-import { useNavigate, useParams } from "react-router"
+import { useNavigate } from "react-router"
 import { Link } from 'react-router-dom'
 
 
@@ -13,6 +13,7 @@ const Signup = () => {
         middlename: "",
         lastname: "",
         dateofbirth: "",
+        age:"",
         gender: "",
         caregivernames: "",
         phonenumber: "",
@@ -21,8 +22,8 @@ const Signup = () => {
         team:"",
     });
     
-    const { id } = useParams("");
-    console.log(id);
+    //const { id } = useParams("");
+    // console.log(id);
 
     const navigate = useNavigate();
 
@@ -57,6 +58,7 @@ async function onSubmit(e) {
         middlename: "",
         lastname: "",
         dateofbirth: "",
+        age:"",
         gender: "",
         caregivernames: "",
         phonenumber: "",
@@ -128,6 +130,9 @@ async function onSubmit(e) {
                     value={form.dateofbirth}
                     onChange={(e) => updateForm({ dateofbirth: e.target.value })}
                 />
+            </div>
+            <div className="form-group">
+                <p>Age: </p>
             </div>
             <div className="form-group">
             <select 

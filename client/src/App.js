@@ -21,6 +21,7 @@ import Visits from './pages/visit/Visits'
 import Landing from './pages/Landing'
 import Education from './pages/education/Education'
 import Lifeskills from './pages/Lifeskills'
+import UploadDocumentsPage from './pages/upload/UploadDocumentsPage'
 // import { LOGOUT } from './actions/types';
 import './custom.scss';
 //Redux
@@ -69,6 +70,7 @@ const App = () => {
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/signupcreate" element={<SignupCreate />} />
             <Route exact path="/signupcard" element={<SignupCard />} />
+            <Route exact path="/registration/uploads" element={<UploadDocumentsPage />} />
         </Routes>
       </BrowserRouter>
       {/* <Router>

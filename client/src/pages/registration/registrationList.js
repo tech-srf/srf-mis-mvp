@@ -6,7 +6,7 @@ const Registration = (props) => (
 
 
     <tr>
-        <td>{props.registration.firstname} {props.registration.middlename} {props.registration.lastname}</td>
+        <td>{props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</td>
         <td>{props.registration.schoolname}</td>
         <td>{props.registration.clinic}</td>
         <td><Link to="/registrationcard" className="btn btn-success">View</Link></td>

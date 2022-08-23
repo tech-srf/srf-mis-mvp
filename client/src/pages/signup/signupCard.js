@@ -10,13 +10,22 @@ const Signup = (props) => (
   <div class="card-group">
     <div class="card mb-3">
       <div class="card-body">
-      <h5 class="card-title">Names: {props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</h5>
-      <p class="card-subtitle">Gender: {props.signup.gender}</p>
-      <p class="card-subtitle">Caregiver: {props.signup.caregivernames}</p>
-      <p class="card-subtitle">Relationship: {props.signup.relationship}</p>
-      <p class="card-subtitle">Phone Number: {props.signup.phonenumber}</p>
-      <p class="card-subtitle">Clinic: {props.signup.clinic}</p>
-      <p class="card-subtitle">Team: {props.signup.team}</p>
+      <h5 class="card-title">{props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</h5>
+      <div className="p card-title"></div>
+      <p class="card-subtitle">Gender:</p>
+      <div className="p card-text">{props.signup.gender}</div>
+      <p class="card-subtitle">Age:</p>
+      <div className="p card-text">{props.signup.age}</div>
+      <p class="card-subtitle">Caregiver:</p>
+      <div className="p card-text">{props.signup.caregivernames}</div>
+      <p class="card-subtitle">Relationship:</p>
+      <div className="p card-text">{props.signup.relationship}</div>
+      <p class="card-subtitle">Phone Number:</p>
+      <div className="p card-text">{props.signup.phonenumber}</div>
+      <p class="card-subtitle">Clinic:</p>
+      <div className="p card-text">{props.signup.clinic}</div>
+      <p class="card-subtitle">Team: </p>
+      <div className="p card-text">{props.signup.team}</div>
       </div>
     </div>
   </div>
@@ -83,17 +92,9 @@ export default function SignupCard() {
               </Link>
           </div>
         </div>
-          <table className="table table-striped" style={{ marginTop: 20 }}>
-            {/* <thead>
-              <tr>
-                <th>Names</th>
-                <th>Position</th>
-                <th>Level</th>
-                <th>Action</th>
-              </tr>
-            </thead> */}
-            <tbody>{signupCard()}</tbody>
-          </table>
+            <div className="col d-flex justify-content-center">
+              <tbody className="signup-card">{signupCard()}</tbody>
+            </div>
         </BoxContainer>
     </div>
   );

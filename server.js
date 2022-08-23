@@ -22,7 +22,6 @@ require("dotenv").config({ path: "./config.env" });
 app.use(cors());
 app.use(express.json());
 app.use(require("./routes/signup"));
-app.use(require("./routes/search"));
 app.use(require("./routes/casemanagement"));
 app.use(require("./routes/class8"));
 app.use(require("./routes/clinicsession"));

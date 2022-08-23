@@ -7,7 +7,7 @@ import NavSideBar from "../../components/NavSideBar";
 
 
 const Registration = (props) => (
-    <div class="card-group">
+    <div class="card-group-reg">
         <div className="card mb-3">
         <div className="card-body">
         {/* <h5 class="card-title">Names: {props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</h5> */}
@@ -51,28 +51,20 @@ const Registration = (props) => (
             <div className="p card-text">{props.registration.homecondition}</div>
         <p className="card-subtitle">Home Size:</p>
             <div className="p card-text">{props.registration.homesize}</div>
-        <p className="card-subtitle">Bed</p> 
-            <div className="p card-text">{props.registration.assetbed}</div>
-        <p className="card-subtitle">Mattress</p> 
-            <div className="p card-text">{props.registration.assetmattress}</div>
-        <p className="card-subtitle">Beddings</p> 
-            <div className="p card-text">{props.registration.assetbeddings}</div>
-        <p className="card-subtitle">Furniture</p> 
-            <div className="p card-text">{props.registration.assetfurniture}</div>
-        <p className="card-subtitle">Stove</p> 
-            <div className="p card-text">{props.registration.assetstove}</div>
-        <p className="card-subtitle">Gas Cooker</p> 
-            <div className="p card-text">{props.registration.assetgascooker}</div>
-        <p className="card-subtitle">Electricity</p> 
-            <div className="p card-text">{props.registration.assetelectricity}</div>
-        <p className="card-subtitle">Solar Lamp</p> 
-            <div className="p card-text">{props.registration. assetsolarlamp}</div>
-        <p className="card-subtitle">Television</p> 
-            <div className="p card-text">{props.registration.assettelevision}</div>
-        <p className="card-subtitle">Radio</p> 
-            <div className="p card-text">{props.registration.assetradio}</div>
-        <p className="card-subtitle">Fridge</p> 
-            <div className="p card-text">{props.registration.assetfridge}</div>
+        <p className="card-subtitle">Family Assets and services:</p> 
+            <>
+                <div className="p card-text">{props.registration.assetbed}</div>
+                <div className="p card-text">{props.registration.assetmattress}</div>
+                <div className="p card-text">{props.registration.assetbeddings}</div>
+                <div className="p card-text">{props.registration.assetfurniture}</div>
+                <div className="p card-text">{props.registration.assetstove}</div>
+                <div className="p card-text">{props.registration.assetgascooker}</div>
+                <div className="p card-text">{props.registration.assetelectricity}</div>
+                <div className="p card-text">{props.registration.assetsolarlamp}</div>
+                <div className="p card-text">{props.registration.assettelevision}</div>
+                <div className="p card-text">{props.registration.assetradio}</div>
+                <div className="p card-text">{props.registration.assetfridge}</div>
+            </>
         <p className="card-subtitle">Where children sleep</p>
             <div className="p card-text">{props.registration.childrensleep}</div>
         <p className="card-subtitle">Access to Water:</p>
@@ -84,17 +76,17 @@ const Registration = (props) => (
 
         <hr />
         <p className="card-subtitle">Food Cost:</p>
-            <div className="p card-text">Ksh:{props.registration.foodcost} {props.registration.frequency}</div>
+            <div className="p card-text">Ksh:{props.registration.foodcost} {props.registration.foodfrequency}</div>
         <p className="card-subtitle">Rent Cost:</p>
-            <div className="p card-text">Ksh:{props.registration.rentcost} {props.registration.frequency}</div>
+            <div className="p card-text">Ksh:{props.registration.rentcost} {props.registration.rentfrequency}</div>
         <p className="card-subtitle">Electricity Cost:</p>
-            <div className="p card-text">Ksh:{props.registration.electricitycost} {props.registration.frequency}</div>
+            <div className="p card-text">Ksh:{props.registration.electricitycost} {props.registration.electricityfrequency}</div>
         <p className="card-subtitle">Water Cost:</p>
-            <div className="p card-text">Ksh:{props.registration.watercost} {props.registration.frequency}</div>
+            <div className="p card-text">Ksh:{props.registration.watercost} {props.registration.watercfrequency}</div>
         <p className="card-subtitle">Toilet Cost:</p>
-            <div className="p card-text">Ksh:{props.registration.toiletcost} {props.registration.frequency}</div>
+            <div className="p card-text">Ksh:{props.registration.toiletcost} {props.registration.toiletfrequency}</div>
         <p className="card-subtitle">Medical Cost:</p>
-            <div className="p card-text">Ksh:{props.registration.medicalcost} {props.registration.frequency}</div>
+            <div className="p card-text">Ksh:{props.registration.toiletcost} {props.registration.toiletfrequency}</div>
         
         <hr />
         <p className="card-subtitle">Member Name:</p>
@@ -103,8 +95,8 @@ const Registration = (props) => (
             <div className="p card-text">{props.registration.memberrelationship}</div>
         <p className="card-subtitle">Medical Concern:</p>
             <div className="p card-text">{props.registration.medicalconcern}</div>
-        <p className="card-subtitle">teatment Status:</p>
-            <div className="p card-text">{props.registration.treatmentstatus}</div>
+        <p className="card-subtitle">Member Treatment Status:</p>
+            <div className="p card-text">{props.registration.membertreatmentstatus}</div>
         <p className="card-subtitle">NHIF:</p>
             <div className="p card-text">{props.registration.nhif}</div>
         <p className="card-subtitle">NHIF Number:</p>
@@ -123,19 +115,14 @@ const Registration = (props) => (
             <div className="p card-text">{props.registration.parentalaction}</div>
         <p className="card-subtitle">Summary & Observations:</p>
             <div className="p card-text">{props.registration.briefsummary}</div>
-        <p className="card-subtitle">Childrens behaviour and Concerns:</p>
-            <div className="p card-text">{props.registration.childrensbehaviour}</div>
-        <p className="card-subtitle">Physical Abuse</p>
+        <p className="card-subtitle">Community behaviour and Concerns:</p>
+            <div className="p card-text">{props.registration.communitybehaviour}</div>
+        <p className="card-subtitle">Forms of abuse common with the community:</p>
             <div className="p card-text">{props.registration.physicalabuse}</div>
-        <p className="card-subtitle">Sexual Abuse</p>
             <div className="p card-text">{props.registration.sexualabuse}</div>
-        <p className="card-subtitle">Negligence</p>
             <div className="p card-text">{props.registration.negligenceabuse}</div>
-        <p className="card-subtitle">Emotional Abuse</p>
             <div className="p card-text">{props.registration.emotionalabuse}</div>
-        <p className="card-subtitle">Other forms of Abuse</p>
             <div className="p card-text">{props.registration.otherabuse}</div>
-        <p className="card-subtitle">None</p>
             <div className="p card-text">{props.registration.none}</div>
         <p className="card-subtitle">Explanation for other abuse form</p>
             <div className="p card-text">{props.registration.otherexplanation}</div>
@@ -249,9 +236,9 @@ const Registration = (props) => (
                 </Link>
             </div>
             </div>
-            <table className="table table-striped" style={{ marginTop: 20 }}>
+            <div className="col d-flex justify-content-center">
                 <tbody>{registrationCard()}</tbody>
-            </table>
+            </div>
             </BoxContainer>
         </div>
     );
