@@ -1,7 +1,7 @@
 {
   "name": "srf-mis-mvp",
   "version": "1.0.0",
-  "description": "",
+  "description": "management information system",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -9,8 +9,16 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "node js",
+    "upload",
+    "download",
+    "file",
+    "multipart",
+    "rest api",
+    "express"
+  ],
+  "author": "Nash The Coder",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",

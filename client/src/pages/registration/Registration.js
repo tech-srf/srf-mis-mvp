@@ -3,12 +3,11 @@ import NavSideBar from '../../components/NavSideBar'
 import BoxContainer  from '../../components/BoxContainer'
 import { Col  } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
-import { useNavigate } from "react-router"
+import { useParams, useNavigate } from "react-router"
 import { Link } from "react-router-dom";
 
 
 const Registration = () => {
-
     const [form, setForm] = useState({
         registrationdate: "",
         schoolname: "",
@@ -94,6 +93,7 @@ const Registration = () => {
         vulerabilityscale: "",
         necessaryrecommendations:"",
     });
+    const params = useParams();
     const navigate = useNavigate();
 
  // These methods will update the state properties.

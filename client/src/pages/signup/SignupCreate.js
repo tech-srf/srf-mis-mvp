@@ -21,9 +21,6 @@ const Signup = () => {
         clinic:"",
         team:"",
     });
-    
-    //const { id } = useParams("");
-    // console.log(id);
 
     const navigate = useNavigate();
 

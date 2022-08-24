@@ -63,91 +63,91 @@ const School = () => {
                         value={form.sessiondate}
                         onChange={(e) => updateForm({ sessiondate: e.target.value })}
                     />
-                            </div>
-                            <div className="form-group">
-                            <label htmlFor="playerbio">Player Details</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="firstname"
-                                placeholder="First Name"
-                                value={form.firstname}
-                                onChange={(e) => updateForm({ firstname: e.target.value })}
-                            />
-                            </div>
-                            <div className="form-group">
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="middlename"
-                                placeholder="Middle Name"
-                                value={form.middlename}
-                                onChange={(e) => updateForm({ middlename: e.target.value })}
-                            />
-                            </div>
-                            <div className="form-group">
-                            <input
-                                type="text"
-                                className="form-control"
-                                id="lastname"
-                                placeholder="Last Name"
-                                value={form.lastname}
-                                onChange={(e) => updateForm({ lastname: e.target.value })}
-                            />
-                            </div>
-                            <div className="form-group">
-                            <label htmlFor="carergiverdetails">SRF Details</label>
-                            <select 
-                                className="form-control"
-                                id="clinic"
-                                value={form.clinic}
-                                onChange={(e) => updateForm({ clinic: e.target.value })}
-                            >
-                                <option>Select Clinic</option>
-                                <option value="Eastlands">Eastlands</option>
-                                <option value="Kangemi">Kangemi</option>
-                                <option value="Kibera">Kibera</option>
-                                <option value="Korogocho">Korogocho</option>
-                                <option value="Mathare">Mathare</option>
-                                <option value="Ngewe">Ngewe</option>
-                                <option value="Tatu City">Tatu City</option>
-                            </select>            
-                            </div>
-                            <div className="form-group">
-                            <select 
-                                className="form-control"
-                                id="gender"
-                                value={form.gender}
-                                onChange={(e) => updateForm({ gender: e.target.value })}
-                            >
-                                <option>Select gender</option>
-                                <option value="Female">Female</option>
-                                <option value="Male">Male</option>
-                            </select>            
-                            </div>
-                            {/* <div className="form-group">
-                            <input
-                                type="checkbox"
-                                className="form-control"
-                                id="attendance"
-                                name="attendance"
-                                placeholder="Present"
-                                value={form.attendance}
-                                onChange={(e) => updateForm({ attendance: e.target.value })}
-                            />
-                            </div> */}
-                            <div className="form-group">
-                            <input
-                                type="submit"
-                                value="Add player"
-                                className="btn btn-success"
-                            />
-                            </div>
-                            <SchoolsessionList />
-                            <br />
-                            <br />
-                            <br />
-                    </form>
+                </div>
+                {/* <div className="form-group">
+                <label htmlFor="playerbio">Player Details</label>
+                <input
+                    type="text"
+                    className="form-control"
+                    id="firstname"
+                    placeholder="First Name"
+                    value={form.firstname}
+                    onChange={(e) => updateForm({ firstname: e.target.value })}
+                />
+                </div>
+                <div className="form-group">
+                <input
+                    type="text"
+                    className="form-control"
+                    id="middlename"
+                    placeholder="Middle Name"
+                    value={form.middlename}
+                    onChange={(e) => updateForm({ middlename: e.target.value })}
+                />
+                </div>
+                <div className="form-group">
+                <input
+                    type="text"
+                    className="form-control"
+                    id="lastname"
+                    placeholder="Last Name"
+                    value={form.lastname}
+                    onChange={(e) => updateForm({ lastname: e.target.value })}
+                />
+                </div> */}
+                <div className="form-group">
+                <label htmlFor="carergiverdetails">SRF Details</label>
+                <select 
+                    className="form-control"
+                    id="clinic"
+                    value={form.clinic}
+                    onChange={(e) => updateForm({ clinic: e.target.value })}
+                >
+                    <option>Select Clinic</option>
+                    <option value="Eastlands">Eastlands</option>
+                    <option value="Kangemi">Kangemi</option>
+                    <option value="Kibera">Kibera</option>
+                    <option value="Korogocho">Korogocho</option>
+                    <option value="Mathare">Mathare</option>
+                    <option value="Ngewe">Ngewe</option>
+                    <option value="Tatu City">Tatu City</option>
+                </select>            
+                </div>
+                <div className="form-group">
+                <select 
+                    className="form-control"
+                    id="gender"
+                    value={form.gender}
+                    onChange={(e) => updateForm({ gender: e.target.value })}
+                >
+                    <option>Select gender</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>            
+                </div>
+                {/* <div className="form-group">
+                <input
+                    type="checkbox"
+                    className="form-control"
+                    id="attendance"
+                    name="attendance"
+                    placeholder="Present"
+                    value={form.attendance}
+                    onChange={(e) => updateForm({ attendance: e.target.value })}
+                />
+                </div> */}
+                <div className="form-group">
+                <input
+                    type="submit"
+                    value="Add player"
+                    className="btn btn-success"
+                />
+                </div>
+                <SchoolsessionList />
+                <br />
+                <br />
+                <br />
+            </form>
         </div>
     )
 }

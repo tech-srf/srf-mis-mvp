@@ -219,7 +219,7 @@ registrationRoutes.route("/update/:id").post(function (req, response) {
     additonalskills: req.body.additonalskills,
     vulerabilityscale: req.body.vulerabilityscale,
     necessaryrecommendations: req.body.necessaryrecommendations,
-    // },
+    },
   };
   db_connect
     .collection("registrations")

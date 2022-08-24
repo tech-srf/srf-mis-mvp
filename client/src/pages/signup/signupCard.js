@@ -1,34 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
 import BoxContainer from "../../components/BoxContainer"
-import { Link } from "react-router-dom";
-import NavSideBar from "../../components/NavSideBar";
+import { Col  } from 'react-bootstrap'
 
 
 
 
 const Signup = (props) => (
-  <div class="card-group">
-    <div class="card mb-3">
-      <div class="card-body">
-      <h5 class="card-title">{props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</h5>
-      <div className="p card-title"></div>
-      <p class="card-subtitle">Gender:</p>
-      <div className="p card-text">{props.signup.gender}</div>
-      <p class="card-subtitle">Age:</p>
-      <div className="p card-text">{props.signup.age}</div>
-      <p class="card-subtitle">Caregiver:</p>
-      <div className="p card-text">{props.signup.caregivernames}</div>
-      <p class="card-subtitle">Relationship:</p>
-      <div className="p card-text">{props.signup.relationship}</div>
-      <p class="card-subtitle">Phone Number:</p>
-      <div className="p card-text">{props.signup.phonenumber}</div>
-      <p class="card-subtitle">Clinic:</p>
-      <div className="p card-text">{props.signup.clinic}</div>
-      <p class="card-subtitle">Team: </p>
-      <div className="p card-text">{props.signup.team}</div>
-      </div>
-    </div>
-  </div>
+  <>
+    {/* <div class="row mb-4">
+      <div class="col-lg-12"> */}
+        <div class="card w-200 mb-4">
+          <h5 class="card-header">{props.signup.firstname} {props.signup.middlename} {props.signup.lastname}</h5>
+            <div class="card-body">
+              <div className="row">
+                <Col><p class="card-subtitle px-4">Age:</p></Col>
+                <Col><p class="card-title mx-0">{props.signup.age}</p></Col>
+              </div>
+              <div className="row">
+                <Col><p class="card-subtitle px-4">Gender:</p></Col>
+                <Col><p class="card-title mx-0">{props.signup.gender}</p></Col>
+              </div>
+              <div className="row">
+                <Col><p class="card-subtitle px-4 px-4">Caregiver's Name:</p></Col>
+                <Col><p class="card-title mx-0">{props.signup.caregivernames}</p></Col>
+              </div>
+              <div className="row">
+                <Col><p class="card-subtitle px-4">Relationship:</p></Col>
+                <Col><p class="card-title mx-0">{props.signup.relationship}</p></Col>
+              </div>
+              <div className="row">
+                <Col><p class="card-subtitle px-4">Phone Number:</p></Col>
+                <Col><p class="card-title mx-0">{props.signup.phonenumber}</p></Col>
+              </div>
+              <div className="row">
+                <Col><p class="card-subtitle px-4">Clinic:</p></Col>
+                <Col><p class="card-title mx-0">{props.signup.clinic}</p></Col>
+              </div>
+              <div className="row">
+                <Col><p class="card-subtitle px-4">Team:</p></Col>
+                <Col><p class="card-title mx-0">{props.signup.team}</p></Col>
+              </div>
+              <br />
+          </div>
+        </div>
+      {/* </div>
+    </div> */}
+  </>
 );
 
 export default function SignupCard() {
@@ -80,18 +97,7 @@ export default function SignupCard() {
   // This following section will display the table with the signups of individuals.
   return (
     <div>
-      <NavSideBar />
         <BoxContainer>
-        <div className="row d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <div className="col">
-              <h3 className="h3">Signed Up Players</h3>
-          </div>
-          <div className="col">
-              <Link to="/registration" className="btn btn-success">
-                  Register new player
-              </Link>
-          </div>
-        </div>
             <div className="col d-flex justify-content-center">
               <tbody className="signup-card">{signupCard()}</tbody>
             </div>

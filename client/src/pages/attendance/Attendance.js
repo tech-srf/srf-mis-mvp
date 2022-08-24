@@ -15,7 +15,7 @@ const Attendance = () => {
             <NavSideBar />
             <BoxContainer>
             <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h2 className="h2 text-success">Attendance</h2>
+                <h2 className="h2 text-success">Record Attendance</h2>
             </div>
             {/* CLINIC TAB */}
             <Tabs

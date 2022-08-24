@@ -21,76 +21,78 @@ function NavSideBar() {
                     <nav id="sidebarMenu" className="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                     <div className="position-sticky pt-5">
                         <ul className="nav flex-column">
-                        {/* <li className="nav-item">
-                            <a className="nav-link" href="/dashboard">
-                            <i className="bi bi-layout-wtf text-success px-1"></i>
-                            <span data-feather="home"></span>
-                            Dashboard
-                            </a>
-                        </li> */}
-                        <li className="nav-item">
-                            <a className="nav-link" href="/signup">
-                            <span data-feather="file"></span>
-                            <i className="bi bi-pencil-square text-success px-1"></i>
-                            Sign Up
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/registration">
-                            <span data-feather="registration"></span>
-                            <i className="bi bi-calendar2-check text-success px-1"></i>
-                            Registration
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/registration/uploads">
-                            <span data-feather="upload"></span>
-                            <i className="bi bi-upload text-success px-1"></i>
-                            Upload Docs
-                            </a>
-                        </li> 
-                        <li className="nav-item">
-                            <a className="nav-link" href="/attendance">
-                            <span data-feather="users"></span>
-                            <i className="bi bi-person-check-fill text-success px-1"></i>
-                            Attendance
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="visits">
-                            <span data-feather="bar-chart-2"></span>
-                            <i className="bi bi-house-fill text-success px-1"></i>
-                            Visits
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/counseling">
-                            <span data-feather="layers"></span>
-                            <i className="bi bi-person-hearttext-success px-1"></i>
-                            Counseling
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/education">
-                            <span data-feather="layers"></span>
-                            <i className="bi bi-book-half text-success px-1"></i>
-                            Education
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="lifeskills">
-                            <span data-feather="layers"></span>
-                            <i className="bi bi-tools text-success px-1"></i>
-                            Lifeskills
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/profile">
-                            <span data-feather="layers"></span>
-                            <i className="bi bi-people-fill text-success px-1"></i>
-                            Profiles
-                            </a>
-                        </li>
+                            {/* <li className="nav-item">
+                                <a className="nav-link" href="/dashboard">
+                                <i className="bi bi-layout-wtf text-success px-1"></i>
+                                <span data-feather="home"></span>
+                                Dashboard
+                                </a>
+                            </li> */}
+                            <li className="nav-item">
+                                <a className="nav-link" href="/signup">
+                                <span data-feather="file"></span>
+                                <i className="bi bi-pencil-square text-success px-1"></i>
+                                Sign Up
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/registration">
+                                <span data-feather="registration"></span>
+                                <i className="bi bi-calendar2-check text-success px-1"></i>
+                                Registration
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/registration/uploads">
+                                <span data-feather="upload"></span>
+                                <i className="bi bi-upload text-success px-1"></i>
+                                Upload Docs
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/profiles">
+                                <span data-feather="layers"></span>
+                                <i className="bi bi-people-fill text-success px-1"></i>
+                                Profiles
+                                </a>
+                            </li>
+                        <hr className="nav-hr" />
+                            <li className="nav-item">
+                                <a className="nav-link" href="/counseling">
+                                <span data-feather="layers"></span>
+                                <i className="bi bi-person-fill text-success px-1"></i>
+                                Counseling
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/education">
+                                <span data-feather="layers"></span>
+                                <i className="bi bi-book-half text-success px-1"></i>
+                                Education
+                                </a>
+                            </li> 
+                        <hr className="nav-hr" />
+                            <li className="nav-item">
+                                <a className="nav-link" href="/attendance">
+                                <span data-feather="users"></span>
+                                <i className="bi bi-person-check-fill text-success px-1"></i>
+                                Attendance
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="visits">
+                                <span data-feather="bar-chart-2"></span>
+                                <i className="bi bi-house-fill text-success px-1"></i>
+                                Visits
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="lifeskills">
+                                <span data-feather="layers"></span>
+                                <i className="bi bi-tools text-success px-1"></i>
+                                Lifeskills
+                                </a>
+                            </li>
                         </ul>
 
                         {/* <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-1 mt-4 mb-1 text-muted">
@@ -114,6 +116,7 @@ function NavSideBar() {
                             Admin
                             </a>
                         </li> */}
+                    <hr className="nav-hr" />
                         <li className="nav-item">
                             <a className="nav-link" href="/">
                             <span data-feather="file-text"></span>

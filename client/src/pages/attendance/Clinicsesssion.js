@@ -66,7 +66,7 @@ const Clinic = () => {
                             onChange={(e) => updateForm({ sessiondate: e.target.value })}
                         />
                     </div>
-                    <div className="form-group">
+                    {/* <div className="form-group">
                     <label htmlFor="playerbio">Player Details</label>
                         <input
                             type="text"
@@ -96,7 +96,7 @@ const Clinic = () => {
                             value={form.lastname}
                             onChange={(e) => updateForm({ lastname: e.target.value })}
                         />
-                    </div>
+                    </div> */}
                     <div className="form-group">
                     <label htmlFor="carergiverdetails">SRF Details</label>
                         <select 
