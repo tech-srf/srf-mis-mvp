@@ -12,11 +12,11 @@ function NavSideBar() {
                     <img src={Logo} alt="" width="150" height="57" />
                 </a>
                 <button
-					className="navbar-toggler collapsed position-absolute d-md-none"
+					className="navbar-toggler collapsed"
 					type="button"
 					data-bs-toggle="collapse"
-                    data-bs-target="#sidebarMenu" 
-                    aria-controls="sidebarMenu"
+					data-bs-target="#mobileMenu"
+					aria-controls="mobileMenu"
 					aria-expanded="false"
 					aria-label="Toggle navigation"
 				>
@@ -24,6 +24,61 @@ function NavSideBar() {
 					<span className="toggler-icon middle-bar"></span>
 					<span className="toggler-icon bottom-bar"></span>
 				</button>
+				<div className="collapse navbar-collapse" id="mobileMenu">
+					<ul className="navbar-nav me-auto mb-2 mb-lg-0">
+						<li className="nav-item">
+							<NavLink
+								className="nav-link"
+								activeClassName="active"
+								to="/home"
+								
+							>
+								<i className="bi bi-list text-success px-1"></i>
+								Home
+							</NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink
+								className="nav-link"
+								activeClassName="active"
+								to="/signupcreate"
+							>
+								<i className="bi bi-pencil-square text-success px-1"></i>
+								Signup
+							</NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink
+								className="nav-link"
+								activeClassName="active"
+								to="registrationcreate"
+							>
+								<i className="bi bi-calendar2-check text-success px-1"></i>
+								Registration
+							</NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink
+								className="nav-link"
+								activeClassName="active"
+								to="/uploads"
+							>
+								<i className="bi bi-upload text-success px-1"></i>
+								Uploads
+							</NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink 
+								className="nav-link"
+								activeClassName="active"
+								to="/profiles"
+							>
+								<i className="bi bi-people-fill text-success px-1"></i>
+								Profiles
+							</NavLink>
+						</li>
+					</ul>
+				</div>
                 <div className="collapse navbar-collapse" id="mobileMenu">
 					<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 						<li className="nav-item">
