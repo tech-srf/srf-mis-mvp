@@ -40,6 +40,7 @@ signupRoutes.route("/signup/:id").get(function (req, res) {
 signupRoutes.route("/signup/add").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myobj = {
+      date: req.body.date,
       firstname: req.body.firstname,
       middlename: req.body.middlename,
       lastname: req.body.lastname,
@@ -64,6 +65,7 @@ signupRoutes.route("/update/:id").post(function (req, response) {
   let myquery = { _id: ObjectId( req.params.id )};
   let newvalues = {
     $set: {
+      date: req.body.date,
       firstname: req.body.firstname,
       middlename: req.body.middlename,
       lastname: req.body.lastname,

@@ -4,7 +4,8 @@ import BoxContainer  from '../../components/BoxContainer'
 import { Col  } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 import { useParams, useNavigate } from "react-router"
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import { v4 as uuidv4 } from 'uuid'
 
 
 const Registration = () => {
@@ -94,6 +95,17 @@ const Registration = () => {
         necessaryrecommendations:"",
     });
     const params = useParams();
+    const [inputFields, setInputFields] = useState([
+        { id: uuidv4(), 
+            membername: "",
+            memberrelationship: "",
+            medicalconcern: "",
+            membertreatmentstatus: "",
+            beneficiaryname: "",
+            yearofentry: "",
+            membershipstatus: "",
+        }
+    ])
     const navigate = useNavigate();
 
  // These methods will update the state properties.
@@ -106,6 +118,7 @@ const Registration = () => {
       // This function will handle the submission.
 async function onSubmit(e) {
     e.preventDefault();
+    console.log("InputFields", inputFields);
 
     // When a post request is sent to the create url, we'll add a new record to the database.
     const newPlayer = { ...form };
@@ -210,6 +223,37 @@ async function onSubmit(e) {
     navigate("/registration");
 }
 
+const handleChangeInput = (id, event) => {
+    const newInputFields = inputFields.map(i => {
+        if(id === i.id) {
+        i[event.target.name] = event.target.value
+        }
+        return i;
+    })
+    
+    setInputFields(newInputFields);
+}
+
+const handleAddFields = () => {
+    setInputFields([...inputFields, { 
+    
+    membername: "",
+    memberrelationship: "",
+    medicalconcern: "",
+    membertreatmentstatus: "", 
+    beneficiaryname: "",
+    yearofentry: "",
+    membershipstatus: "",
+    id: uuidv4(), 
+}])
+}
+
+const handleRemoveFields = id => {
+    const values  = [...inputFields];
+    values.splice(values.findIndex(value => value.id === id), 1);
+    setInputFields(values);
+}
+
     return (
         <Fragment>
         <NavSideBar />
@@ -220,7 +264,7 @@ async function onSubmit(e) {
                             <h3 className="text-success">Registration</h3>
                         </div>
                         <div className="col">
-                            <Link to="/profile" className="btn btn-success">
+                            <Link to="/profiles" className="btn btn-success">
                                 View Record
                             </Link>
                         </div>
@@ -846,8 +890,10 @@ async function onSubmit(e) {
                     <h5 className="section-header text-success">Physical Health</h5>
             </div>
             <div className="form-group">
-                <label>List the family members with medical conditions including allergies and disabilities.</label>
-                <input
+            <label>List the family members with medical conditions including allergies and disabilities.</label>
+                { inputFields.map(inputField => (
+                    <div key={inputField.id}>
+                        <input
                     type="text"
                     className="form-control"
                     id="membername"
@@ -888,14 +934,20 @@ async function onSubmit(e) {
                         <Button 
                             className="btn btn-success" 
                             sm="6"
-                            // onClick{...() => addFormFields()}
-                        >Add Family member</Button>
+                            onClick={handleAddFields}>
+                            Add Family member</Button>
                     </Col>
                     <br />
-                    {/* <Col>
-                        <Button className="btn btn-success" sm="6">Remove Family member</Button>
-                    </Col> */}
+                    <Col>
+                        <Button 
+                        disabled={inputFields.length === 1} onClick={() => handleRemoveFields(inputField.id)}
+                        className="btn btn-success" 
+                        sm="6">
+                        Remove Family member</Button>
+                    </Col>
                 </div>
+                    </div>
+                ))}
             </div>
             <div className="form-group">
                 <label>Does the family have a medical cover? (NHIF) If no kindly advice on the importance of it?</label>
@@ -1197,44 +1249,57 @@ async function onSubmit(e) {
                     <h5 className="section-header text-success">Beneficiaries who are SRF members</h5>
             </div>
             <div className="form-group">
-                <label>List any other SRF Beneficiaries.</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    id="beneficiaryname"
-                    placeholder="Name"
-                    value={form.beneficiaryname}
-                    onChange={(e) => updateForm({ beneficiaryname: e.target.value })}
-                />
-                <br />
-                <input
-                    type="text"
-                    className="form-control"
-                    id="yearofentry"
-                    placeholder="Year of Entry"
-                    value={form.yearofentry}
-                    onChange={(e) => updateForm({ yearofentry: e.target.value })}
-                />
-                <br />
-                <input
-                    type="text"
-                    className="form-control"
-                    id="membershipstatus"
-                    placeholder="Membership Status"
-                    value={form.membershipstatus}
-                    onChange={(e) => updateForm({ membershipstatus: e.target.value })}
-                />
-                <br />
-                <div className="mb-4">
-                    <Col>
-                        <Button className="btn btn-success" sm="6">Add Beneficiary</Button>
-                    </Col>
+            <label>List any other SRF Beneficiaries.</label>
+                { inputFields.map(inputField =>(
+                    <div key={inputField.id}>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="beneficiaryname"
+                            placeholder="Name"
+                            value={form.beneficiaryname}
+                            onChange={(e) => updateForm({ beneficiaryname: e.target.value })}
+                        />
                     <br />
-                    {/* <Col>
-                        <Button className="btn btn-success" sm="6">Remove Beneficiary</Button>
-                    </Col> */}
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="yearofentry"
+                            placeholder="Year of Entry"
+                            value={form.yearofentry}
+                            onChange={(e) => updateForm({ yearofentry: e.target.value })}
+                        />
+                    <br />
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="membershipstatus"
+                            placeholder="Membership Status"
+                            value={form.membershipstatus}
+                            onChange={(e) => updateForm({ membershipstatus: e.target.value })}
+                        />
+                    <br />
+                        <div className="mb-4">
+                            <Col>
+                                <Button 
+                                        className="btn btn-success" 
+                                        sm="6"
+                                        onClick={handleAddFields}
+                                    >Add Beneficiary</Button>
+                            </Col>
+                            <br />
+                            <Col>
+                                <Button 
+                                disabled={inputFields.length === 1} onClick={() => handleRemoveFields(inputField.id)}
+                                className="btn btn-success" 
+                                sm="6"
+                                >
+                                Remove Beneficiary</Button>
+                            </Col>
+                        </div>
+                    </div>
+                ))}
                 </div>
-            </div>
             <hr />
 {/* CAREGIVER CONSENT */}
             <div className="flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">

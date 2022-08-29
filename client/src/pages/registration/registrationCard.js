@@ -179,7 +179,7 @@ const Registration = (props) => (
     // This method fetches the registrations from the database.
     useEffect(() => {
         async function getRegistrations() {
-        const response = await fetch(`http://localhost:5000/registration/`);
+        const response = await fetch(`http://localhost:5000/registration/:id`);
 
         if (!response.ok) {
             const message = `An error occured: ${response.statusText}`;

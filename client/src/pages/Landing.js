@@ -18,7 +18,7 @@ return (
             <p className="lead">
             Managemement Information System
             </p>
-            <Link to="/signup" className="btn btn-light">
+            <Link to="/home" className="btn btn-light">
                 Login
             </Link>
         </div>

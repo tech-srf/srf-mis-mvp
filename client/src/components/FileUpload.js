@@ -27,9 +27,12 @@ function FileUpload() {
             </div>
             <div className="form-group row p-2">
                 <div className="col-sm-4 p-">
-                    <Link to="/profiles" className="btn btn-success" type="submit" method="POST" >
-                        Attach
-                    </Link>
+                    <input 
+                        className="btn btn-success" 
+                        type="submit" 
+                        method="POST" 
+                        value="Attach"
+                    />
                 </div>
             </div>
         </div>

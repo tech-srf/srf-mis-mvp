@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import NavSideBar from '../../components/NavSideBar'
 import BoxContainer  from '../../components/BoxContainer'
 import { Fragment } from 'react'
-import { useNavigate } from "react-router"
 import { Link } from 'react-router-dom'
-
-
+import { useNavigate } from "react-router"
 
 const Signup = () => {
+    const current = new Date();
+    const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
     const [form, setForm] = useState({
+        date:"",
         firstname: "",
         middlename: "",
         lastname: "",
@@ -20,7 +21,8 @@ const Signup = () => {
         relationship:"",
         clinic:"",
         team:"",
-    });
+    }
+    );
 
     const navigate = useNavigate();
 
@@ -32,7 +34,7 @@ const Signup = () => {
     }
 
       // This function will handle the submission.
-async function onSubmit(e) {
+    async function onSubmit(e) {
     e.preventDefault();
 
     // When a post request is sent to the create url, we'll add a new record to the database.
@@ -51,6 +53,7 @@ async function onSubmit(e) {
     });
 
     setForm({ 
+        date:"",
         firstname: "",
         middlename: "",
         lastname: "",
@@ -62,7 +65,8 @@ async function onSubmit(e) {
         relationship:"",
         clinic:"",
         team:"",
-    });
+    }
+    );
     navigate("/signup");
 }
 
@@ -89,7 +93,13 @@ async function onSubmit(e) {
             </div>
             <form onSubmit={onSubmit}>
             <div className="form-group">
+            <p 
+            onChange={(e) => updateForm({ date: e.target.value })}
+            >
+                Date:{date}
+            </p>
             <label htmlFor="playerbio">Player Bio</label>
+            
             <input
                 type="text"
                 className="form-control"
@@ -155,7 +165,7 @@ async function onSubmit(e) {
             </div>
             <div className="form-group">
             <input
-                type="number"
+                type="phonenumber"
                 className="form-control"
                 id="phonenumber"
                 placeholder="Phone Number"
@@ -209,11 +219,10 @@ async function onSubmit(e) {
                 <option value="Senior">Senior</option>
             </select>            
             </div>
-            <div className="form-group">
-                <Link to="/signup" className="btn btn-success">
-                Sign up player
-                </Link>
-            </div>
+            <input
+                type="submit" className="btn btn-success"
+                value="Sign up player"
+            />
             </form>
             </BoxContainer>
             <br />

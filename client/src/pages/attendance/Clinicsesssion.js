@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router";
-import ClinicsessionList from "./clinicList";
 
 
 const Clinic = () => {
@@ -144,11 +143,10 @@ const Clinic = () => {
                     <div className="form-group">
                         <input
                             type="submit"
-                            value="Add player"
+                            value="Record attendance"
                             className="btn btn-success"
                         />
                     </div>
-                    <ClinicsessionList />
                 </form>
             </>
         </div>

@@ -4,9 +4,7 @@ import { Container , Row, Col} from 'react-bootstrap'
 
 const BoxContainer = ({children}) => {
     return (
-        <Container className="pt-4">
-            
-            
+        <Container className="pt-0">
             <Row className="justify-content-md-center m-4">
                 <Col xs={14} s={12} md={8}>
                     {children}

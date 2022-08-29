@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router";
-import SchoolsessionList from "./schoolsessionList"
 // import Image from '../assets/img/man.png'
 // import BoxContainer from '../components/BoxContainer'
 
@@ -139,11 +138,10 @@ const School = () => {
                 <div className="form-group">
                 <input
                     type="submit"
-                    value="Add player"
+                    value="Record attendance"
                     className="btn btn-success"
                 />
                 </div>
-                <SchoolsessionList />
                 <br />
                 <br />
                 <br />

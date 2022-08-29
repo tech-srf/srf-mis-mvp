@@ -188,6 +188,62 @@ body {
 }
 
 
+//TabNav
+.tab-nav{
+	margin-top:70px;
+	margin-bottom:60px;   
+}
+
+.tab-nav a{    
+	color:#A2A2A2;
+	font-size:20px;
+	font-weight: 500;
+	padding:20px;
+	text-decoration: none;
+}
+
+
+//Home
+
+.grid {
+	padding: 16px;
+	display:grid;
+	grid-gap: 16px;
+
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(2, 1fr) ;
+	}
+
+	@media (min-width: 960px) {
+		grid-template-columns: repeat(3, 1fr) ;
+	}
+
+	@media (min-width: 1200px) {
+		grid-template-columns: repeat(4, 1fr) ;
+	}
+
+	.col {
+		background-color: #018934;
+		padding: 16px;
+		width: 200px;
+		height: 80px;
+		border-radius: 0.25em;
+		
+
+		h4 {
+			color: #ffffff;
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
 //Landing
 .landing {
 	position: relative;
