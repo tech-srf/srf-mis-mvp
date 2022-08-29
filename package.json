@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "management information system",
   "main": "server.js",
+  "engines": {
+    "node": "v18.7.0"
+  },
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
