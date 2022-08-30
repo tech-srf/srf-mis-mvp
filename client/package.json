@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "2": "^3.0.0",
-    "@ant-design/icons": "^4.7.0",
     "@reduxjs/toolkit": "^1.8.3",
     "@svgr/plugin-svgo": "^6.3.1",
     "@testing-library/jest-dom": "^5.16.4",
@@ -30,7 +29,6 @@
     "react-redux": "^8.0.2",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
-    "react-year-picker": "^0.3.7",
     "realm-web": "^1.7.1",
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",
