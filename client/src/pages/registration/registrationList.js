@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
-import BoxContainer from "../../components/BoxContainer";
-import NavSideBar from "../../components/NavSideBar"
+import { Link } from "react-router-dom";
 
 
 const Registration = (props) => (
@@ -73,23 +71,18 @@ const Registration = (props) => (
 
     // This following section will display the table with the signed up players.
     return (
-        <> 
-            <BoxContainer>
-            <div className="table">
-            <table className="table table-striped" style={{ marginTop: 20 }}>
-                <thead>
-                <tr>
-                    {/* <th>Id</th> */}
-                    <th>Names</th>
-                    <th>School</th>
-                    <th>Clinic</th>
-                </tr>
-                </thead>
-                <tbody>{registrationList()}</tbody>
-            </table>
-            </div>
-            </BoxContainer>
-        </>
-
+        <div className="table">
+        <table className="table table-striped" style={{ marginTop: 20 }}>
+            <thead>
+            <tr>
+                {/* <th>Id</th> */}
+                <th>Names</th>
+                <th>School</th>
+                <th>Clinic</th>
+            </tr>
+            </thead>
+            <tbody>{registrationList()}</tbody>
+        </table>
+        </div>
     );
 }
