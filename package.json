@@ -8,7 +8,6 @@
   },
   "scripts": {
     "install-client": "cd client && npm install",
-    "build": "webpack",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build"
   },
   "repository": {
