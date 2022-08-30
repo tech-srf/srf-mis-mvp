@@ -62,8 +62,10 @@
   },
   "proxy": "http://localhost:5000/",
   "devDependencies": {
-    "fsevents": "^2.3.2",
     "react-scripts": "^5.0.1",
     "sass": "^1.53.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
