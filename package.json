@@ -1,0 +1,23 @@
+{
+  "name": "lastresort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "v18.7.0"
+  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tech-srf/srf-mis-mvp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tech-srf/srf-mis-mvp/issues"
+  },
+  "homepage": "https://github.com/tech-srf/srf-mis-mvp#readme"
+}
