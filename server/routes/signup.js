@@ -60,7 +60,7 @@ signupRoutes.route("/signup/add").post(function (req, response) {
 });
 
 // This section will help you update a signup by id.
-signupRoutes.route("/update/:id").post(function (req, response) {
+signupRoutes.route("/signup/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   let newvalues = {
@@ -89,7 +89,7 @@ signupRoutes.route("/update/:id").post(function (req, response) {
 });
 
 // This section will help you delete a signup
-signupRoutes.route("/:id").delete((req, response) => {
+signupRoutes.route("/signup/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   db_connect.collection("signups").deleteOne(myquery, function (err, obj) {

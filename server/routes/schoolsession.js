@@ -54,7 +54,7 @@ schoolsessionRoutes.route("/schoolsession/add").post(function (req, response) {
 });
 
 // This section will help you update a schoolsession by id.
-schoolsessionRoutes.route("/update/:id").post(function (req, response) {
+schoolsessionRoutes.route("/schoolsession/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   let newvalues = {
@@ -77,7 +77,7 @@ schoolsessionRoutes.route("/update/:id").post(function (req, response) {
 });
 
 // This section will help you delete a schoolsession
-schoolsessionRoutes.route("/:id").delete((req, response) => {
+schoolsessionRoutes.route("/schoolsession/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   db_connect.collection("schoolsessions").deleteOne(myquery, function (err, obj) {

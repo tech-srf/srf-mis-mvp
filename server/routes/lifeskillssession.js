@@ -54,7 +54,7 @@ lifeskillssessionRoutes.route("/lifeskillssession/add").post(function (req, resp
 });
 
 // This section will help you update a lifeskillssession by id.
-lifeskillssessionRoutes.route("/update/:id").post(function (req, response) {
+lifeskillssessionRoutes.route("/lifeskillssession/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   let newvalues = {
@@ -77,7 +77,7 @@ lifeskillssessionRoutes.route("/update/:id").post(function (req, response) {
 });
 
 // This section will help you delete a lifeskillssession
-lifeskillssessionRoutes.route("/:id").delete((req, response) => {
+lifeskillssessionRoutes.route("/lifeskillssession/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   db_connect.collection("lifeskillssessions").deleteOne(myquery, function (err, obj) {

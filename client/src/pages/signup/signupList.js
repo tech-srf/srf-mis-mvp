@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import SearchFeature from '../../pages/SearchFeature'
+import Search from '../../components/Search'
 
 const Signup = (props) => (
 
@@ -73,10 +73,7 @@ const Signup = (props) => (
     return (
         
         <div className="table">
-        <div className="search-bar">
-            <SearchFeature 
-            />
-        </div>
+            <Search />
         <table className="table table-striped" style={{ marginTop: 20 }}>
             <thead>
             <tr>

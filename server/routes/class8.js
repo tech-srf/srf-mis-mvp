@@ -61,7 +61,7 @@ class8Routes.route("/class8/add").post(function (req, response) {
 });
 
 // This section will help you update a class8 by id.
-class8Routes.route("/update/:id").post(function (req, response) {
+class8Routes.route("/class8/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   let newvalues = {
@@ -91,7 +91,7 @@ class8Routes.route("/update/:id").post(function (req, response) {
 });
 
 // This section will help you delete a class8
-class8Routes.route("/:id").delete((req, response) => {
+class8Routes.route("/class8/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   db_connect.collection("class8s").deleteOne(myquery, function (err, obj) {

@@ -131,7 +131,7 @@ registrationRoutes.route("/registration/add").post(function (req, response) {
 });
 
 // This section will help you update a registration by id.
-registrationRoutes.route("/update/:id").post(function (req, response) {
+registrationRoutes.route("/registration/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   let newvalues = {
@@ -231,7 +231,7 @@ registrationRoutes.route("/update/:id").post(function (req, response) {
 });
 
 // This section will help you delete a registration
-registrationRoutes.route("/:id").delete((req, response) => {
+registrationRoutes.route("/registration/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   db_connect.collection("registrations").deleteOne(myquery, function (err, obj) {

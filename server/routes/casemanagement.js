@@ -54,7 +54,7 @@ casemanagementRoutes.route("/casemanagement/add").post(function (req, response) 
 });
 
 // This section will help you update a casemanagement by id.
-casemanagementRoutes.route("/update/:id").post(function (req, response) {
+casemanagementRoutes.route("/casemanagement/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   let newvalues = {
@@ -77,7 +77,7 @@ casemanagementRoutes.route("/update/:id").post(function (req, response) {
 });
 
 // This section will help you delete a casemanagement
-casemanagementRoutes.route("/:id").delete((req, response) => {
+casemanagementRoutes.route("/casemanagement/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   db_connect.collection("casemanagements").deleteOne(myquery, function (err, obj) {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import Search from '../../components/Search'
 
 
 const Registration = (props) => (
@@ -72,6 +73,7 @@ const Registration = (props) => (
     // This following section will display the table with the signed up players.
     return (
         <div className="table">
+            <Search />
         <table className="table table-striped" style={{ marginTop: 20 }}>
             <thead>
             <tr>

@@ -31,19 +31,4 @@ db_connect
     q ? res.json(search(Players).slice(0, 10)) : res.json(Players.slice(0, 10));
 });
 
-// app.get("/", (req, res) => {
-//     let db_connect = dbo.getDb("players");
-//     const { q } = req.query;
-
-//     const keys = ["first_name", "last_name", "age"];
-
-//     const search = (data) => {
-//         return data.filter((item) =>
-//         keys.some((key) => item[key].toLowerCase().includes(q))
-//         );
-//     };
-
-//     q ? res.json(search(Players).slice(0, 10)) : res.json(Players.slice(0, 10));
-// });
-
 module.exports = searchRoutes;

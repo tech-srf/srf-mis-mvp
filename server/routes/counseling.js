@@ -59,7 +59,7 @@ counselingRoutes.route("/counseling/add").post(function (req, response) {
 });
 
 // This section will help you update a counseling by id.
-counselingRoutes.route("/update/:id").post(function (req, response) {
+counselingRoutes.route("/counseling/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   let newvalues = {
@@ -87,7 +87,7 @@ counselingRoutes.route("/update/:id").post(function (req, response) {
 });
 
 // This section will help you delete a counseling
-counselingRoutes.route("/:id").delete((req, response) => {
+counselingRoutes.route("/counseling/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   db_connect.collection("counselings").deleteOne(myquery, function (err, obj) {

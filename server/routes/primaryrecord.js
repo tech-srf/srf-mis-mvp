@@ -56,7 +56,7 @@ primaryrecordRoutes.route("/primaryrecord/add").post(function (req, response) {
 });
 
 // This section will help you update a primaryrecord by id.
-primaryrecordRoutes.route("/update/:id").post(function (req, response) {
+primaryrecordRoutes.route("/primaryrecord/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   let newvalues = {
@@ -81,7 +81,7 @@ primaryrecordRoutes.route("/update/:id").post(function (req, response) {
 });
 
 // This section will help you delete a primaryrecord
-primaryrecordRoutes.route("/:id").delete((req, response) => {
+primaryrecordRoutes.route("/primaryrecord/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   db_connect.collection("primaryrecords").deleteOne(myquery, function (err, obj) {

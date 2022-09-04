@@ -63,7 +63,7 @@ secondaryrecordRoutes.route("/secondaryrecord/add").post(function (req, response
 });
 
 // This section will help you update a secondaryrecord by id.
-secondaryrecordRoutes.route("/update/:id").post(function (req, response) {
+secondaryrecordRoutes.route("/secondaryrecord/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   let newvalues = {
@@ -95,7 +95,7 @@ secondaryrecordRoutes.route("/update/:id").post(function (req, response) {
 });
 
 // This section will help you delete a secondaryrecord
-secondaryrecordRoutes.route("/:id").delete((req, response) => {
+secondaryrecordRoutes.route("/secondaryrecord/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( req.params.id )};
   db_connect.collection("secondaryrecords").deleteOne(myquery, function (err, obj) {

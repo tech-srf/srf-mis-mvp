@@ -5,6 +5,9 @@ const app = express();
 const cors = require("cors");
 const path = require("path")
 
+// get driver connection
+const dbo = require("./db/conn");
+
 require("dotenv").config({ path: "./config.env" });
 
 // /** Seting up server to accept cross-origin browser requests */
@@ -53,8 +56,7 @@ if (process.env.NODE_ENV === 'production') {
 
 const port = process.env.PORT || 5000;
 
-// get driver connection
-const dbo = require("./db/conn");
+
 
 app.listen(port, () => {
   // perform a database connection when server starts
