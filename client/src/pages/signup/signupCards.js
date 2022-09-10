@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import { useParams, useNavigate } from "react-router";
 import BoxContainer from "../../components/BoxContainer"
 import { Col  } from 'react-bootstrap'
 import NavSideBar from "../../components/NavSideBar";
@@ -48,13 +47,13 @@ const Signup = (props) => (
   </>
 );
 
-export default function SignupCard() {
+export default function SignupCards() {
   const [signups, setSignups] = useState([]);
 
   //This method fetches the signups from the database.
   useEffect(() => {
-    async function getSignup(id) {
-      const response = await fetch(`http://localhost:5000/signup/${id}`);
+    async function getSignups() {
+      const response = await fetch(`http://localhost:5000/signup/`);
 
       if (!response.ok) {
         const message = `An error occured: ${response.statusText}`;
@@ -62,11 +61,11 @@ export default function SignupCard() {
         return;
       }
 
-      const newSignups = signups.filter((el) => el._id !== id);
-    setSignups(newSignups);
+      const signups = await response.json();
+      setSignups(signups);
     }
 
-    getSignup();
+    getSignups();
 
     return; 
   }, [signups.length]);
@@ -84,7 +83,7 @@ export default function SignupCard() {
   }
 
   // This method will map out the signups on the table
-  function SignupCard() {
+  function SignupCards() {
     return signups.map((signup) => {
       return (
         <Signup
@@ -102,7 +101,7 @@ export default function SignupCard() {
       <NavSideBar />
         <BoxContainer>
             <div className="col d-flex justify-content-center">
-              <body className="signup-card">{SignupCard()}</body>
+              <body className="signup-card">{SignupCards()}</body>
             </div>
         </BoxContainer>
     </div>

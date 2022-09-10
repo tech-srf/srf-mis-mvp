@@ -40,7 +40,7 @@ function Dashboard() {
                         
                     </div>
                     <div className="col">
-                    <a href="/dashboard"><h4>Dashboard</h4></a>
+                    <a href="/education"><h4>Education</h4></a>
                         
                     
                     </div>

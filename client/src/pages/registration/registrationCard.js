@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import BoxContainer from "../../components/BoxContainer"
 import { Link } from "react-router-dom"
 import NavSideBar from "../../components/NavSideBar"
-import SignupCard from "../signup/signupCard"
+import SignupCard from "../signup/signupCards"
 
 const Registration = (props) => (
     <div class="card-group-reg">

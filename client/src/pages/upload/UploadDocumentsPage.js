@@ -8,12 +8,12 @@ import Axios from 'axios';
 const { Title } = Typography;
 
 const DocumentTypes = [
-  {key: 1, value: "Child birth certificate"},
-  {key: 2, value: "Father's ID"},
-  {key: 3, value: "Mother's ID"},
-  {key: 4, value: "Guardian's ID"},
-  {key: 5, value: "Passport size photo"},
-  {key: 6, value:  "Exam results copy"}
+    {key: 1, value: "Child birth certificate"},
+    {key: 2, value: "Father's ID"},
+    {key: 3, value: "Mother's ID"},
+    {key: 4, value: "Guardian's ID"},
+    {key: 5, value: "Passport size photo"},
+    {key: 6, value:  "Exam results copy"}
 ]
 
 function UploadDocumentsPage(props) {
@@ -53,36 +53,36 @@ function UploadDocumentsPage(props) {
     }
 
 
-  return (
+return (
     <div>
-      <NavSideBar />
-      <BoxContainer>
-        <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-              <Title level={2}>Upload Player Docs</Title>
-          </div>
-          <Form onSubmit={onSubmit} >
-              {/* DropZone */}
-              <FileUpload refreshFunction={updateImages} />
+        <NavSideBar />
+        <BoxContainer>
+            <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                <Title level={2}>Upload Player Docs</Title>
+            </div>
+            <Form onSubmit={onSubmit} >
+                {/* DropZone */}
+                <FileUpload refreshFunction={updateImages} />
 
-              <br />
-              <br />
-              <select onChange={onDocumentTypesSelectChange} value={DocumentTypeValue}>
-                  {DocumentTypes.map(item => (
-                  <option key={item.key} value={item.key}>{item.value} </option>
-                  ))}
-              </select>
-              <br />
-              <br />
+                <br />
+                <br />
+                <select onChange={onDocumentTypesSelectChange} value={DocumentTypeValue}>
+                    {DocumentTypes.map(item => (
+                    <option key={item.key} value={item.key}>{item.value} </option>
+                    ))}
+                </select>
+                <br />
+                <br />
 
-              <Button className="btn btn-success" onClick={onSubmit}>
-                  Submit
-              </Button>
-          </Form>
+                <Button className="btn btn-success" onClick={onSubmit}>
+                    Submit
+                </Button>
+            </Form>
+            </div>
+        </BoxContainer>
         </div>
-      </BoxContainer>
-    </div>
-  )
+    )
 }
 
 export default UploadDocumentsPage

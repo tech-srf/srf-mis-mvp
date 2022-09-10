@@ -1,6 +1,5 @@
 import React from 'react'
 import './navsidebar.css'
-import { NavLink } from "react-router-dom";
 import Logo from "../assets/img/logo.png"
 
 
@@ -16,32 +15,32 @@ function NavSideBar() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarCollapse">
-                        <div className="navbar-nav nav-item p-2">
-                            <a href="/home" className="nav-link m-2">
+                        <div className="navbar-nav p-2 ms-auto">
+                            <a href="/home" className="nav-item nav-link m-2">
                                 <i className="bi bi-list text-success px-2"></i>
                                 Home
                             </a>
-                            <a href="/signupcreate" className="nav-link m-2">
+                            <a href="/signupcreate" className="nav-item nav-link m-2">
                                 <i className="bi bi-pencil-square text-success px-2"></i>
                                 SignUp
                             </a>
-                            <a href="/registration" className="nav-link m-2">
+                            <a href="/registration" className="nav-item nav-link m-2">
                                 <i className="bi bi-calendar2-check text-success px-2"></i>
                                 Registration
                             </a>
-                            <a href="/registration/uploads" className="nav-link m-2">
+                            <a href="/registration/uploads" className="nav-item nav-link m-2">
                                 <i className="bi bi-upload text-success px-2"></i>
                                 Uploads
                             </a>
-                            <a href="/profiles" className="nav-link m-2">
+                            <a href="/profiles" className="nav-item nav-link m-2">
                                 <i className="bi bi-people-fill text-success px-2"></i>
                                 Profile
                             </a>
                         </div>
                         <div className="navbar-nav ms-auto">
-                        <a href="/landing" className="nav-item nav-link p-2">
+                        <a href="/" className="nav-item nav-link p-2">
                                 <i class="bi bi-box-arrow-right text-success px-2"></i>
-                                Login
+                                Logout
                             </a>
                         </div>
                     </div>

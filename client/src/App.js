@@ -19,6 +19,7 @@ import Settings from './pages/Settings'
 import Signup from './pages/signup/Signup'
 import SignupCreate from './pages/signup/SignupCreate'
 import SignupList from './pages/signup/signupList'
+import SignupCards from './pages/signup/signupCards'
 import SignupCard from './pages/signup/signupCard'
 import Visits from './pages/visit/Visits'
 import Landing from './pages/Landing'
@@ -74,6 +75,7 @@ const App = () => {
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/signuplist" element={<SignupList />} />
             <Route exact path="/signupcreate" element={<SignupCreate />} />
+            <Route exact path="/signupcards" element={<SignupCards />} />
             <Route exact path="/signupcard" element={<SignupCard />} />
             <Route exact path="/registration/uploads" element={<UploadDocumentsPage />} />
         </Routes>
